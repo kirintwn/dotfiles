@@ -35,7 +35,7 @@ FZF_TAB_COMMAND=(
 )
 zstyle ":fzf-tab:*" command $FZF_TAB_COMMAND
 zstyle ":fzf-tab:*" single-group ""
-zstyle ":fzf-tab:complete:cd:*" extra-opts --preview=$extract"exa -1 --color=always --icons --group-directories-first $realpath"
+zstyle ":fzf-tab:complete:cd:*" extra-opts --preview=$extract'exa -1 --color=always --icons --group-directories-first $realpath'
 
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
