@@ -58,6 +58,8 @@ zinit snippet OMZ::plugins/sudo/sudo.plugin.zsh
 zinit snippet OMZ::plugins/aws/aws.plugin.zsh
 zinit snippet OMZ::plugins/kubectl/kubectl.plugin.zsh
 zinit snippet OMZ::plugins/alias-finder/alias-finder.plugin.zsh
+zinit ice svn
+zinit snippet OMZ::plugins/extract
 
 # zsh completions
 zinit ice blockf
