@@ -12,37 +12,7 @@ autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
 ### End of Zinit's installer chunk
 
-### Misc config
-local extract="
-# trim input
-local in=\${\${\"\$(<{f})\"%\$'\0'*}#*\$'\0'}
-# get ctxt for current completion
-local -A ctxt=(\"\${(@ps:\2:)CTXT}\")
-# real path
-local realpath=\${ctxt[IPREFIX]}\${ctxt[hpre]}\$in
-realpath=\${(Qe)~realpath}
-"
-FZF_TAB_COMMAND=(
-    fzf
-    --ansi
-    --expect='$continuous_trigger' # For continuous completion
-    '--color=hl:$(( $#headers == 0 ? 108 : 255 ))'
-    --nth=2,3 --delimiter='\x00'  # Don't search prefix
-    --layout=reverse --height='${FZF_TMUX_HEIGHT:=75%}'
-    --tiebreak=begin -m --cycle
-    '--query=$query'
-    '--header-lines=$#headers'
-)
-zstyle ":fzf-tab:*" command $FZF_TAB_COMMAND
-zstyle ":fzf-tab:*" single-group ""
-zstyle ":fzf-tab:complete:cd:*" extra-opts --preview=$extract'exa -1 --color=always --icons --group-directories-first $realpath'
-
-ZSH_AUTOSUGGEST_STRATEGY=(history completion)
-ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
-ZSH_AUTOSUGGEST_USE_ASYNC=1
-ZSH_AUTOSUGGEST_MANUAL_REBIND=1
-### End of Misc config
-
+# powerlevel10k
 zinit ice depth=1
 zinit light romkatv/powerlevel10k
 
@@ -61,45 +31,60 @@ zinit snippet OMZ::plugins/alias-finder/alias-finder.plugin.zsh
 zinit ice svn
 zinit snippet OMZ::plugins/extract
 
-# zsh completions
+# zsh-completions
 zinit ice blockf
 zinit light zsh-users/zsh-completions
 
-# Bin
+# bat
 zinit ice as"program" from"gh-r" mv"bat* -> bat" pick"bat/bat"
 zinit light sharkdp/bat
 
+# exa
 zinit ice from"gh-r" as"program" mv"exa* -> exa"
 zinit light ogham/exa
+zinit as"completion" mv"c* -> _exa" for "https://github.com/ogham/exa/blob/master/contrib/completions.zsh"
 
+# jq
+zinit ice from"gh-r" as"program" mv"jq* -> jq"
+zinit light stedolan/jq
+
+# fd
 zinit ice as"program" from"gh-r" mv"fd* -> fd" pick"fd/fd"
 zinit light sharkdp/fd
 
+# rg
 zinit ice as"program" from"gh-r" mv"ripgrep* -> ripgrep" pick"ripgrep/rg"
 zinit light BurntSushi/ripgrep
 
+# fzf
 zinit ice from"gh-r" as"program"
 zinit light junegunn/fzf-bin
+zinit snippet "https://github.com/junegunn/fzf/blob/master/shell/completion.zsh"
+zinit snippet "https://github.com/junegunn/fzf/blob/master/shell/key-bindings.zsh"
 
+# delta
 zinit ice as"program" from"gh-r" mv"delta* -> delta" pick"delta/delta"
 zinit light dandavison/delta
 
+# z
 zinit load agkozak/zsh-z
 
+# nvm
 zinit light lukechilds/zsh-nvm
 
+# pyenv
 zinit ice atclone'PYENV_ROOT="$PWD" ./libexec/pyenv init - > zpyenv.zsh' \
     atinit'export PYENV_ROOT="$PWD"' atpull"%atclone" \
     as"program" pick"bin/pyenv" src"zpyenv.zsh" nocompile"!"
 zinit light pyenv/pyenv
 
-# fzf related stuff
+# fzf-tab
 zinit light Aloxaf/fzf-tab
-zinit snippet "https://github.com/junegunn/fzf/blob/master/shell/completion.zsh"
-zinit snippet "https://github.com/junegunn/fzf/blob/master/shell/key-bindings.zsh"
 
+# fast-syntax-highlighting
 zinit ice wait lucid atinit"ZINIT[COMPINIT_OPTS]=-C; zpcompinit; zpcdreplay"
 zinit light zdharma/fast-syntax-highlighting
 
+# zsh-autosuggestions
 zinit ice wait lucid atload"!_zsh_autosuggest_start"
 zinit load zsh-users/zsh-autosuggestions

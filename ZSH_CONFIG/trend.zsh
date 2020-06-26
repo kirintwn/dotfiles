@@ -1,10 +1,10 @@
-# aws login
-alias aws-login="pm2 start ~/scripts/get-all-credentials.sh --cron \"*/30 * * * *\" --no-autorestart"
+# aws login cron job
+alias reload-credentials="pm2 start ~/scripts/get-all-credentials.sh --cron \"*/30 * * * *\" --no-autorestart"
 
 # eks config
-alias k8s-eks-spn-d="aws eks update-kubeconfig --name  spn-eks-dev --profile spn-dev"
-alias k8s-eks-spn-s="aws eks update-kubeconfig --name  spn-eks-stg --profile spn-stg"
-alias k8s-eks-spn-p="aws eks update-kubeconfig --name  spn-eks-prod --profile spn-prod"
+alias k8s-eks-spn-d="aws eks update-kubeconfig --name spn-eks-dev --profile spn-dev"
+alias k8s-eks-spn-s="aws eks update-kubeconfig --name spn-eks-stg --profile spn-stg"
+alias k8s-eks-spn-p="aws eks update-kubeconfig --name spn-eks-prod --profile spn-prod"
 
 # awscli
 alias awsd="aws --profile spn-dev"
