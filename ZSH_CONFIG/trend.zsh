@@ -2,9 +2,9 @@
 alias reload-credentials="pm2 start ~/scripts/get-all-credentials.sh --cron \"*/30 * * * *\" --no-autorestart"
 
 # eks config
-alias k8s-eks-spn-d="aws eks update-kubeconfig --name spn-eks-dev --profile spn-dev"
-alias k8s-eks-spn-s="aws eks update-kubeconfig --name spn-eks-stg --profile spn-stg"
-alias k8s-eks-spn-p="aws eks update-kubeconfig --name spn-eks-prod --profile spn-prod"
+alias config-eks-spn-d="aws --profile spn-dev eks update-kubeconfig --name spn-eks-dev --alias spn-dev"
+alias config-eks-spn-s="aws --profile spn-stg eks update-kubeconfig --name spn-eks-stg --alias spn-stg"
+alias config-eks-spn-p="aws --profile spn-prod eks update-kubeconfig --name spn-eks-prod --alias spn-prod"
 
 # awscli
 alias awsd="aws --profile spn-dev"
