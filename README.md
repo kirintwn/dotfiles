@@ -1,4 +1,6 @@
-# Setup
+# Dotfiles
+
+## Setup
 
 - Create a dotfiles folder to track dotfiles
 
@@ -18,7 +20,7 @@ alias dotfiles="git --git-dir=$HOME/dotfiles/ --work-tree=$HOME"
 dotfiles config --local status.showUntrackedFiles no
 ```
 
-# Usage
+## Usage
 
 ```bash
 dotfiles status
@@ -35,7 +37,7 @@ dotfiles remote add origin git@github.com:USERNAME/dotfiles.git
 dotfiles push origin master
 ```
 
-# Restore dotfiles to new machine
+## Restore dotfiles to new machine
 
 ```bash
 alias dotfiles="git --git-dir=$HOME/dotfiles/ --work-tree=$HOME"
