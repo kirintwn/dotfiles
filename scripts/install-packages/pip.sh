@@ -6,8 +6,8 @@
 
 pip install --upgrade pip
 
-pip install awscli
-pip install glances
-pip install --user neovim
+pip install --user --upgrade awscli
+pip install --user --upgrade glances
+pip install --user --upgrade neovim
 
 asdf reshim python
