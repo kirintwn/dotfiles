@@ -1,0 +1,10 @@
+{
+    "python.pythonPath": "/Users/lesley_lin/anaconda3/bin/python",
+    "python.formatting.provider": "autopep8",
+    "python.formatting.autopep8Args": ["--max-line-length", "120", "--experimental"],
+    "python.linting.enabled": true,
+    "python.linting.flake8Enabled": true,
+    "python.linting.lintOnSave": true,
+    "python.autoComplete.addBrackets": true,
+    "python.sortImports.args": ["-rc", "--atomic"]
+}

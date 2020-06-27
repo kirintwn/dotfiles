@@ -12,8 +12,10 @@ brew install zsh
 # *	sudo sh -c "echo $(which zsh) >> /etc/shells" 
 # *	chsh -s $(which zsh)
 
+brew install gnupg
 brew install neofetch
 brew install derailed/k9s/k9s
+brwe install neovim
 
 brew tap homebrew/cask-fonts
 

@@ -69,14 +69,8 @@ zinit light dandavison/delta
 # z
 zinit load agkozak/zsh-z
 
-# nvm
-zinit light lukechilds/zsh-nvm
-
-# pyenv
-zinit ice atclone'PYENV_ROOT="$PWD" ./libexec/pyenv init - > zpyenv.zsh' \
-    atinit'export PYENV_ROOT="$PWD"' atpull"%atclone" \
-    as"program" pick"bin/pyenv" src"zpyenv.zsh" nocompile"!"
-zinit light pyenv/pyenv
+# asdf
+zinit light asdf-vm/asdf
 
 # fzf-tab
 zinit light Aloxaf/fzf-tab
