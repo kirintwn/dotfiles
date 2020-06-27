@@ -5,6 +5,7 @@ sources+="$ZSH_CONFIG/theme.zsh"
 sources+="$ZSH_CONFIG/environment.zsh"
 sources+="$ZSH_CONFIG/zinit.zsh"
 sources+="$ZSH_CONFIG/aliases.zsh"
+sources+="$ZSH_CONFIG/functions.zsh"
 sources+="$ZSH_CONFIG/misc.zsh"
 sources+="$ZSH_CONFIG/trend.zsh"
 
