@@ -1,24 +1,29 @@
-# Set user conditionally by using git config 'includeIf':
-# reference: https://git-scm.com/docs/git-config#_includes
-[includeIf "gitdir:~/works/personal/"]
-	path = ~/works/personal/gitconfig
-# [user]
-#  	  name = kirintwn
-#	  email = cy91244@gmail.com
+[user]
+  name = kirintwn
+  email = cy91244@gamil.com
+
+#############################################################
+# switch / replace git user conditionally                   #
+# reference: https://git-scm.com/docs/git-config#_includes  #
+#                                                           #
+# [user]                                                    #
+#   name = kirin-hou                                        #
+#   email = kirin_hou@trendmicro.com                        #
+#############################################################
 [includeIf "gitdir:~/works/trend/"]
-	path = ~/works/trend/gitconfig
-# [user]
-#  	  name = kirin-hou
-#	  email = kirin_hou@trendmicro.com
-############################################################
+  path = ~/works/trend/.gitconfig
+
 [core]
-	ignorecase = false
-	excludesfile = ~/.gitignore_global
-	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
-	pager = delta
+  ignorecase = false
+  excludesfile = ~/.gitignore_global
+  whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
+  pager = delta
+
 [push]
-	default = current
+  default = current
+
 [interactive]
-	diffFilter = delta --color-only
+  diffFilter = delta --color-only
+
 [color]
-	ui = auto
+  ui = auto
