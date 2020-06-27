@@ -11,8 +11,6 @@ export LESS=-R
 export BAT_PAGER="less -rR"
 export BAT_THEME="TwoDark"
 
-export MICRO_TRUECOLOR=1
-
 export FZF_DEFAULT_COMMAND='rg --hidden --no-ignore -l ""'
 export FZF_DEFAULT_OPTS="--bind=tab:accept"
 
