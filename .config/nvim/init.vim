@@ -51,16 +51,16 @@ nnoremap <C-Q> :bd<CR>
 " *************F5 Auto Compile (Normal+Visual mode)***********
 map <F5> :call CompileRunGcc()<CR>
 func! CompileRunGcc()
-        exec "w"
-        if &filetype == 'sh'
-        	:!time bash %
-        elseif &filetype == 'python'
-                exec "!clear":
-                exec "!time python3 %"
-        elseif &filetype == 'go'
-                " exec "!go build %<"
-                exec "!time go run %"
-        endif
+  exec "w"
+  if &filetype == 'sh'
+    :!time bash %
+  elseif &filetype == 'python'
+    exec "!clear":
+    exec "!time python3 %"
+  elseif &filetype == 'go'
+    " exec "!go build %<"
+    exec "!time go run %"
+  endif
 endfunc
 
 " *************ctrl+s Save (Insert mode)*************
@@ -129,6 +129,34 @@ hi FoldColumn ctermbg=bg guibg=bg
 
 
 " ##################################PlugIn Setting##################################
+" *******************fzf***********************
+let g:fzf_layout = {
+  \ 'up':'~90%',
+  \ 'window': {
+  \   'width': 0.8,
+  \   'height': 0.8,
+  \   'yoffset': 0.5,
+  \   'xoffset': 0.5,
+  \   'border': 'sharp'
+  \   }
+  \ }
+
+let g:fzf_colors = {
+  \ 'fg':      ['fg', 'Normal'],
+  \ 'bg':      ['bg', 'Normal'],
+  \ 'hl':      ['fg', 'Comment'],
+  \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+  \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+  \ 'hl+':     ['fg', 'Statement'],
+  \ 'info':    ['fg', 'PreProc'],
+  \ 'border':  ['fg', 'Ignore'],
+  \ 'prompt':  ['fg', 'Conditional'],
+  \ 'pointer': ['fg', 'Exception'],
+  \ 'marker':  ['fg', 'Keyword'],
+  \ 'spinner': ['fg', 'Label'],
+  \ 'header':  ['fg', 'Comment']
+  \ }
+
 " *************vim-airline setting*************
 " Check themes here: https://github.com/jaredramirez/vim-airline-themes/blob/a643026f0b666974fdfc0e7474b3a70a7ef4101c/doc/airline-themes.txt
 let g:airline_theme='bubblegum'                                                                                                            
@@ -148,17 +176,17 @@ let g:NERDTreeDirArrowCollapsible = ''
 
 " *************Nerd Tree git*************
 let g:NERDTreeIndicatorMapCustom = {
-    \ "Modified"  : "✹",
-    \ "Staged"    : "✚",
-    \ "Untracked" : "✭",
-    \ "Renamed"   : "➜",
-    \ "Unmerged"  : "═",
-    \ "Deleted"   : "✖",
-    \ "Dirty"     : "✗",
-    \ "Clean"     : "✔︎",
-    \ 'Ignored'   : '☒',
-    \ "Unknown"   : "?"
-    \ }
+  \ "Modified"  : "✹",
+  \ "Staged"    : "✚",
+  \ "Untracked" : "✭",
+  \ "Renamed"   : "➜",
+  \ "Unmerged"  : "═",
+  \ "Deleted"   : "✖",
+  \ "Dirty"     : "✗",
+  \ "Clean"     : "✔︎",
+  \ 'Ignored'   : '☒',
+  \ "Unknown"   : "?"
+  \ }
 
 " *************Indent Guide*************
 let g:indent_guides_enable_on_vim_startup = 1
@@ -214,9 +242,9 @@ endif
 " NOTE: Use command ':verbose imap<tab>' to make sure tab is not mapped by
 " other plugin before putting this into your config.
 inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
+  \ pumvisible() ? "\<C-n>" :
+  \ <SID>check_back_space() ? "\<TAB>" :
+  \ coc#refresh()
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 function! s:check_back_space() abort
@@ -334,5 +362,6 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
-" Do not show any files listed in .gitignore
+" Do not show any files listed in .gitignore (fzf)
+" Reference: https://github.com/junegunn/fzf.vim/issues/121#issuecomment-575922206
 nnoremap <silent> <leader>j :GFiles --cached --others --exclude-standard<cr>
