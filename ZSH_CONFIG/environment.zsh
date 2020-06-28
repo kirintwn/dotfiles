@@ -6,9 +6,9 @@ export VISUAL=nvim
 export EDITOR="$VISUAL"
 
 export PAGER=less
-export LESS=-R
+export LESS=-RF
 
-export BAT_PAGER="less -rR"
+export BAT_PAGER="less"
 export BAT_THEME="TwoDark"
 
 export FZF_DEFAULT_COMMAND='rg --hidden --no-ignore -l ""'
