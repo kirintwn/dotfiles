@@ -12,7 +12,7 @@ export BAT_PAGER="less -rR"
 export BAT_THEME="TwoDark"
 
 export FZF_DEFAULT_COMMAND='rg --hidden --no-ignore -l ""'
-export FZF_DEFAULT_OPTS="--bind=tab:accept"
+export FZF_DEFAULT_OPTS="--height 60% --layout=reverse --border --bind=tab:accept"
 
 export ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 export ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20

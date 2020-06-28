@@ -12,8 +12,11 @@ brew install zsh
 # *	sudo sh -c "echo $(which zsh) >> /etc/shells" 
 # *	chsh -s $(which zsh)
 
+brew install less
 brew install gnupg
 brew install neofetch
+brew install aws-iam-authenticator
+brew install kubectl
 brew install derailed/k9s/k9s
 brwe install neovim
 
