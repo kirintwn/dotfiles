@@ -9,6 +9,8 @@ Plug 'morhetz/gruvbox'
 Plug 'tpope/vim-surround'
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'airblade/vim-rooter'
 
 " vim airline
 Plug 'vim-airline/vim-airline'
@@ -37,9 +39,6 @@ Plug 'nathanaelkane/vim-indent-guides'
 "git
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
-
-" command-t
-Plug 'wincent/command-t'
 
 call plug#end()
 
@@ -335,3 +334,5 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
+" Do not show any files listed in .gitignore
+nnoremap <silent> <leader>j :GFiles --cached --others --exclude-standard<cr>

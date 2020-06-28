@@ -8,10 +8,10 @@ export EDITOR="$VISUAL"
 export PAGER=less
 export LESS=-RF
 
-export BAT_PAGER="less"
+export BAT_PAGER="less -RF"
 export BAT_THEME="TwoDark"
 
-export FZF_DEFAULT_COMMAND='rg --hidden --no-ignore -l ""'
+export FZF_DEFAULT_COMMAND='rg --files --hidden'
 export FZF_DEFAULT_OPTS="--height 60% --layout=reverse --border --bind=tab:accept"
 
 export ZSH_AUTOSUGGEST_STRATEGY=(history completion)
