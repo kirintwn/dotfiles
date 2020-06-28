@@ -18,7 +18,8 @@ brew install neofetch
 brew install aws-iam-authenticator
 brew install kubectl
 brew install derailed/k9s/k9s
-brwe install neovim
+brew install neovim
+brew install --HEAD universal-ctags/universal-ctags/universal-ctags
 
 brew tap homebrew/cask-fonts
 
