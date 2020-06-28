@@ -34,6 +34,9 @@ zinit snippet OMZ::plugins/extract
 zinit ice blockf
 zinit light zsh-users/zsh-completions
 
+# asdf
+zinit light asdf-vm/asdf
+
 # bat
 zinit ice as"program" from"gh-r" mv"bat* -> bat" pick"bat/bat"
 zinit light sharkdp/bat
@@ -65,11 +68,11 @@ zinit snippet "https://github.com/junegunn/fzf/blob/master/shell/key-bindings.zs
 zinit ice as"program" from"gh-r" mv"delta* -> delta" pick"delta/delta"
 zinit light dandavison/delta
 
-# z
-zinit load agkozak/zsh-z
-
-# asdf
-zinit light asdf-vm/asdf
+# z.lua
+# Prerequisites:
+# asdf - install from zinit
+# lua - install from asdf
+zinit light skywind3000/z.lua
 
 # fzf-tab
 zinit light Aloxaf/fzf-tab

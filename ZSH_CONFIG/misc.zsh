@@ -28,6 +28,12 @@ realpath=\${(Qe)~realpath}
 zstyle ":fzf-tab:*" single-group ""
 zstyle ":fzf-tab:complete:cd:*" extra-opts --preview=$extract'exa -1 --color=always --icons --group-directories-first $realpath'
 
+
+# component: fzf-tab & z.lua
+# purpose: use input as query string when completing z.lua
+# reference: https://github.com/Aloxaf/fzf-tab#configure
+zstyle ':fzf-tab:complete:_zlua:*' query-string input
+
 # component: fzf-tab
 # purpose: disable default command keybinding (I use tab for `accept` action)
 # reference: https://github.com/Aloxaf/fzf-tab#command

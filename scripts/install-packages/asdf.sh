@@ -13,5 +13,8 @@ bash -c '${ASDF_DATA_DIR:=$HOME/.asdf}/plugins/nodejs/bin/import-release-team-ke
 # Add python plugin
 asdf plugin-add python
 
+# Add lua plugin
+asdf plugin-add lua https://github.com/Stratus3D/asdf-lua.git
+
 # Add ruby plugin
 asdf plugin-add ruby https://github.com/asdf-vm/asdf-ruby.git
