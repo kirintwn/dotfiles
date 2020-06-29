@@ -9,7 +9,7 @@ Plug 'morhetz/gruvbox'
 Plug 'tpope/vim-surround'
 
 " fzf
-Plug 'junegunn/fzf',
+Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 
 " vim rooter
