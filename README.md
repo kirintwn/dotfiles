@@ -41,7 +41,7 @@ dotfiles push origin master
 
 ```bash
 alias dotfiles="git --git-dir=$HOME/dotfiles/ --work-tree=$HOME"
-git clone --bare git@github.com/USERNAME/dotfiles.git $HOME/dotfiles
+git clone --bare git@github.com:USERNAME/dotfiles.git $HOME/dotfiles
 
 # please remove all conflict files in $HOME before running dotfiles checkout
 dotfiles checkout
