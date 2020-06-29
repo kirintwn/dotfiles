@@ -15,6 +15,3 @@ asdf plugin-add python
 
 # Add lua plugin
 asdf plugin-add lua https://github.com/Stratus3D/asdf-lua.git
-
-# Add ruby plugin
-asdf plugin-add ruby https://github.com/asdf-vm/asdf-ruby.git
