@@ -18,6 +18,7 @@ zinit light romkatv/powerlevel10k
 
 # OMZ libs
 zinit snippet OMZ::lib/completion.zsh
+zinit snippet OMZ::lib/clipboard.zsh
 zinit snippet OMZ::lib/history.zsh
 zinit snippet OMZ::lib/key-bindings.zsh
 zinit snippet OMZ::lib/git.zsh
