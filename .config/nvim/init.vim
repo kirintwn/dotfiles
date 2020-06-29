@@ -477,3 +477,7 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
+
+" Reset cursor to original style (vertical line with blinks)
+" Reference: https://github.com/neovim/neovim/issues/4867#issuecomment-291249173
+au VimLeave * set guicursor=a:ver1-blinkon1
