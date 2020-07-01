@@ -163,6 +163,7 @@ let g:airline#extenions#tabline#buffer_nr_show = 1
 map <silent> - :NERDTreeToggle<CR>
 let g:NERDTreeDirArrowExpandable = ''
 let g:NERDTreeDirArrowCollapsible = ''
+let g:NERDTreeShowHidden=1
 
 " *************Nerd Tree git*************
 let g:NERDTreeIndicatorMapCustom = {
