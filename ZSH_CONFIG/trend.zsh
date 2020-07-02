@@ -1,5 +1,5 @@
 # aws login cron job
-alias reload-credentials="pm2 start ~/scripts/get-all-credentials.sh --cron \"*/30 * * * *\" --no-autorestart"
+alias reload-credentials="pm2 start ~/scripts/get-all-credentials.sh --cron \"*/30 * * * *\" --no-autorestart -f"
 
 # eks config
 alias config-eks-spn-d="aws --profile spn-dev eks update-kubeconfig --name spn-eks-dev --alias spn-dev"
