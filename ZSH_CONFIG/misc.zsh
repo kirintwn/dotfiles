@@ -38,14 +38,14 @@ zstyle ':fzf-tab:complete:_zlua:*' query-string input
 # purpose: disable default command keybinding (I use tab for `accept` action)
 # reference: https://github.com/Aloxaf/fzf-tab#command
 FZF_TAB_COMMAND=(
-    fzf
-    --ansi
-    --expect='$continuous_trigger' # For continuous completion
-    '--color=hl:$(( $#headers == 0 ? 108 : 255 ))'
-    --nth=2,3 --delimiter='\x00'  # Don't search prefix
-    --layout=reverse --height='${FZF_TMUX_HEIGHT:=75%}'
-    --tiebreak=begin -m --cycle
-    '--query=$query'
-    '--header-lines=$#headers'
+  fzf
+  --ansi
+  --expect='$continuous_trigger' # For continuous completion
+  '--color=hl:$(( $#headers == 0 ? 108 : 255 ))'
+  --nth=2,3 --delimiter='\x00'  # Don't search prefix
+  --layout=reverse --height='${FZF_TMUX_HEIGHT:=75%}'
+  --tiebreak=begin -m --cycle
+  '--query=$query'
+  '--header-lines=$#headers'
 )
 zstyle ":fzf-tab:*" command $FZF_TAB_COMMAND
