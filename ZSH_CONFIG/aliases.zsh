@@ -1,5 +1,6 @@
 alias dotfiles="git --git-dir=$HOME/dotfiles/ --work-tree=$HOME"
 alias d="dotfiles"
+# see functions.zsh for "dofiles add"'s alias "da"
 
 alias ls="exa --color=always --icons --group-directories-first"
 alias tree="exa --color=always --icons --group-directories-first -T --git-ignore"
