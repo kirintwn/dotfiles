@@ -71,8 +71,8 @@ zinit light dandavison/delta
 
 # z.lua
 # Prerequisites:
-# asdf - install from zinit
-# lua - install from asdf
+# * asdf - install from zinit
+# * lua - install from asdf
 zinit light skywind3000/z.lua
 
 # fzf-tab
