@@ -26,12 +26,12 @@ dotfiles config --local status.showUntrackedFiles no
 dotfiles status
 
 # .zshrc
-dotfiles add $HOME/.zshrc
-dotfiles commit -m "feat: add .zshrc"
+dotfiles add $HOME/.zshenv
+dotfiles commit -m "feat: add .zshenv"
 
 # ZSH_CONFIG
-dotfiles add $HOME/ZSH_CONFIG/*
-dotfiles commit -m "feat: add ZSH_CONFIG files"
+dotfiles add $HOME/.config/git/*
+dotfiles commit -m "feat: add git config files"
 
 dotfiles remote add origin git@github.com:USERNAME/dotfiles.git
 dotfiles push origin master
