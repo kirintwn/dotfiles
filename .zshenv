@@ -3,7 +3,7 @@ export XDG_CACHE_HOME="$HOME"/.cache
 export XDG_DATA_HOME="$HOME"/.local/share
 
 # mkdir -p "$XDG_CONFIG_HOME"/asdf
-# mkdir -p "$XDG_DATA_HOME"/{zsh,zlua,node,asdf}
+# mkdir -p "$XDG_DATA_HOME"/{zsh,zinit,zlua,node,asdf}
 # mkdir -p "$XDG_CACHE_HOME"/zcompdump
 
 # zsh
@@ -12,11 +12,12 @@ export HISTFILE="$XDG_DATA_HOME"/zsh/zsh_history
 
 # zinit
 declare -A ZINIT
-ZINIT[HOME_DIR]="$ZDOTDIR"/.zinit
-ZINIT[BIN_DIR]="$ZDOTDIR"/.zinit/bin
-ZINIT[PLUGINS_DIR]="$ZDOTDIR"/.zinit/plugins
-ZINIT[COMPLETIONS_DIR]="$ZDOTDIR"/.zinit/completions
-ZINIT[SNIPPETS_DIR]="$ZDOTDIR"/.zinit/snippets
+export ZINITDIR="$XDG_DATA_HOME"/zinit
+ZINIT[HOME_DIR]="$ZINITDIR"
+ZINIT[BIN_DIR]="$ZINITDIR"/bin
+ZINIT[PLUGINS_DIR]="$ZINITDIR"/plugins
+ZINIT[COMPLETIONS_DIR]="$ZINITDIR"/completions
+ZINIT[SNIPPETS_DIR]="$ZINITDIR"/snippets
 ZINIT[ZCOMPDUMP_PATH]="$XDG_CACHE_HOME"/zcompdump/zcompdump-zinit
 
 # z.lua
