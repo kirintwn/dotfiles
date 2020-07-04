@@ -6,18 +6,18 @@
 
 asdf update
 
-# Add nodejs plugin
+# node.js
 asdf plugin-add nodejs https://github.com/asdf-vm/asdf-nodejs.git
 bash -c '${ASDF_DATA_DIR:=$HOME/.asdf}/plugins/nodejs/bin/import-release-team-keyring'
 
-# Add python plugin
+# python
 asdf plugin-add python
 
-# Add lua plugin
+# lua
 asdf plugin-add lua https://github.com/Stratus3D/asdf-lua.git
 
-# Add golang plugin
+# golang
 asdf plugin-add golang https://github.com/kennyp/asdf-golang.git
 
-# Add rust plugin
+# rust
 asdf plugin-add rust https://github.com/code-lever/asdf-rust.git
