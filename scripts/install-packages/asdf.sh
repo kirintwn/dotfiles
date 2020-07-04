@@ -21,3 +21,6 @@ asdf plugin-add golang https://github.com/kennyp/asdf-golang.git
 
 # rust
 asdf plugin-add rust https://github.com/code-lever/asdf-rust.git
+
+# install all package versions specified in ~/.config/asdf/tool-versions
+asdf install
