@@ -2,8 +2,8 @@ export XDG_CONFIG_HOME="$HOME"/.config
 export XDG_CACHE_HOME="$HOME"/.cache
 export XDG_DATA_HOME="$HOME"/.local/share
 
-# mkdir -p "$XDG_CONFIG_HOME"/asdf
-# mkdir -p "$XDG_DATA_HOME"/{zsh,zinit,zlua,node,asdf}
+# mkdir -p "$XDG_CONFIG_HOME"/{asdf,docker}
+# mkdir -p "$XDG_DATA_HOME"/{zsh,zinit,zlua,node,asdf,docker-machine}
 # mkdir -p "$XDG_CACHE_HOME"/zcompdump
 
 # zsh
@@ -33,6 +33,10 @@ export NODE_REPL_HISTORY="$XDG_DATA_HOME"/node/node_repl_history
 
 # ToDo: python
 # Reference: https://docs.python.org/3/library/readline.html?highlight=readline#example
+
+# docker
+export DOCKER_CONFIG="$XDG_CONFIG_HOME"/docker
+export MACHINE_STORAGE_PATH="$XDG_DATA_HOME"/docker-machine
 
 # k9s
 export K9SCONFIG="$XDG_CONFIG_HOME"/k9s
