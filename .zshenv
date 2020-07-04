@@ -2,7 +2,7 @@ export XDG_CONFIG_HOME="$HOME"/.config
 export XDG_CACHE_HOME="$HOME"/.cache
 export XDG_DATA_HOME="$HOME"/.local/share
 
-# mkdir -p "$XDG_CONFIG_HOME"/{asdf,docker}
+# mkdir -p "$XDG_CONFIG_HOME"/{asdf,docker,aws}
 # mkdir -p "$XDG_DATA_HOME"/{zsh,zinit,zlua,node,asdf,docker-machine}
 # mkdir -p "$XDG_CACHE_HOME"/zcompdump
 
@@ -40,6 +40,10 @@ export MACHINE_STORAGE_PATH="$XDG_DATA_HOME"/docker-machine
 
 # k9s
 export K9SCONFIG="$XDG_CONFIG_HOME"/k9s
+
+# aws-cli
+export AWS_SHARED_CREDENTIALS_FILE="$XDG_CONFIG_HOME"/aws/credentials
+export AWS_CONFIG_FILE="$XDG_CONFIG_HOME"/aws/config
 
 # Disable unneeded histories
 ## less
