@@ -33,6 +33,9 @@ export NODE_REPL_HISTORY="$XDG_DATA_HOME"/node/node_repl_history
 # ToDo: python
 # Reference: https://docs.python.org/3/library/readline.html?highlight=readline#example
 
+# k9s
+export K9SCONFIG="$XDG_CONFIG_HOME"/k9s
+
 # Disable unneeded histories
 ## less
 export LESSHISTFILE=-

@@ -1,0 +1,17 @@
+plugin:
+  klogs:
+    shortCut: Ctrl-L
+    description: Pod logs
+    scopes:
+    - pods
+    command: kubectl
+    background: false
+    args:
+    - logs
+    - -f
+    - $FILTER
+    - --namespace
+    - $NAMESPACE
+    - --context
+    - $CONTEXT
+    - --timestamps
