@@ -18,6 +18,7 @@ brew install neofetch
 brew install aws-iam-authenticator
 brew install kubectl
 brew install derailed/k9s/k9s
+brew install tealdeer
 brew install neovim
 brew install --HEAD universal-ctags/universal-ctags/universal-ctags
 

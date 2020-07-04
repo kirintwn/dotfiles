@@ -1,6 +1,6 @@
-# component: ssh & slogin
-# purpose: completion with hosts in ~/.ssh/config & ~/.ssh/known_hosts
-# reference: https://stackoverflow.com/questions/54309712/zsh-doesnt-autocomplete-correctly-my-ssh-command
+# Component: ssh & slogin
+# Purpose: completion with hosts in ~/.ssh/config & ~/.ssh/known_hosts
+# Reference: https://stackoverflow.com/questions/54309712/zsh-doesnt-autocomplete-correctly-my-ssh-command
 h=()
 if [[ -r ~/.ssh/config ]]; then
   h=($h ${${${(@M)${(f)"$(cat ~/.ssh/config)"}:#Host *}#Host }:#*[*?]*})
@@ -13,9 +13,9 @@ if [[ $#h -gt 0 ]]; then
   zstyle ':completion:*:slogin:*' hosts $h
 fi
 
-# component: fzf-tab
-# purpose: provide cd preview
-# reference: https://github.com/Aloxaf/fzf-tab#configure
+# Component: fzf-tab
+# Purpose: provide cd preview
+# Reference: https://github.com/Aloxaf/fzf-tab#configure
 local extract="
 # trim input
 local in=\${\${\"\$(<{f})\"%\$'\0'*}#*\$'\0'}
@@ -29,14 +29,14 @@ zstyle ":fzf-tab:*" single-group ""
 zstyle ":fzf-tab:complete:cd:*" extra-opts --preview=$extract'exa -1 --color=always --icons --group-directories-first $realpath'
 
 
-# component: fzf-tab & z.lua
-# purpose: use input as query string when completing z.lua
-# reference: https://github.com/Aloxaf/fzf-tab#configure
+# Component: fzf-tab & z.lua
+# Purpose: use input as query string when completing z.lua
+# Reference: https://github.com/Aloxaf/fzf-tab#configure
 zstyle ':fzf-tab:complete:_zlua:*' query-string input
 
-# component: fzf-tab
-# purpose: disable default command keybinding (I use tab for `accept` action)
-# reference: https://github.com/Aloxaf/fzf-tab#command
+# Component: fzf-tab
+# Purpose: disable default command keybinding (I use tab for `accept` action)
+# Reference: https://github.com/Aloxaf/fzf-tab#command
 FZF_TAB_COMMAND=(
   fzf
   --ansi
