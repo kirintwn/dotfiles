@@ -47,6 +47,10 @@ export K9SCONFIG="$XDG_CONFIG_HOME"/k9s
 export AWS_SHARED_CREDENTIALS_FILE="$XDG_CONFIG_HOME"/aws/credentials
 export AWS_CONFIG_FILE="$XDG_CONFIG_HOME"/aws/config
 
+# tealdeer (tldr)
+export TEALDEER_CONFIG_DIR="$XDG_CONFIG_HOME"/tealdeer
+export TEALDEER_CACHE_DIR="$XDG_CACHE_HOME"/tealdeer
+
 # Disable unneeded histories
 ## less
 export LESSHISTFILE=-
