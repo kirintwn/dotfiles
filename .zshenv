@@ -33,6 +33,9 @@ export NODE_REPL_HISTORY="$XDG_DATA_HOME"/node/node_repl_history
 # ToDo: python
 # Reference: https://docs.python.org/3/library/readline.html?highlight=readline#example
 
+# golang
+export GOPATH="$XDG_DATA_HOME"/go
+
 # docker
 export DOCKER_CONFIG="$XDG_CONFIG_HOME"/docker
 export MACHINE_STORAGE_PATH="$XDG_DATA_HOME"/docker-machine
