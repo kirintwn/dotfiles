@@ -12,9 +12,6 @@ Plug 'tpope/vim-surround'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 
-" vim rooter
-Plug 'airblade/vim-rooter'
-
 " vim airline
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -36,10 +33,11 @@ Plug 'terryma/vim-multiple-cursors'
 " <leader>cc, <leader>cu
 Plug 'scrooloose/nerdcommenter'
 
-" visually displaying indent levels 
-Plug 'nathanaelkane/vim-indent-guides'
+" indentline
+Plug 'Yggdroot/indentLine'
 
 "git
+Plug 'airblade/vim-rooter'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 
@@ -78,35 +76,56 @@ endfunc
 " *************ctrl+s Save (Insert mode)*************
 imap <C-s> <Esc>:w!<CR>i
 
-" ##################################Vim Setting##################################
+" ##################################Vim Color Setting##################################
 set t_Co=256
-set history=1000
-set nocompatible
-set laststatus=2
+colorscheme gruvbox
+
+hi vertsplit ctermbg=bg guibg=bg
+hi GitGutterAdd ctermbg=bg guibg=bg
+hi GitGutterChange ctermbg=bg guibg=bg
+hi GitGutterDelete ctermbg=bg guibg=bg
+hi GitGutterChangeDelete ctermbg=bg guibg=bg
+hi SyntasticErrorSign ctermbg=bg guibg=bg
+hi SyntasticWarningSign ctermbg=bg guibg=bg
+hi FoldColumn ctermbg=bg guibg=bg
+
+
+" ##################################Vim Setting##################################
 syntax on
+syntax enable
 filetype plugin indent on
+
+set nocompatible
+set history=1000
+set laststatus=2
+
+set mouse=a
+set cursorline
+
+set nu
+set autoindent
+set showmatch
+set scrolloff=4
+set backspace=2
+set clipboard+=unnamedplus
 
 set tabstop=4
 set shiftwidth=4
 set expandtab
-retab
 
-set ignorecase
+set list
+set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<,space:·
+
 set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+
+set foldenable
+set foldmethod=marker
 
 set encoding=utf-8
 set fileencodings=utf-8
-
-set cursorline
-set nu
-
-set autoindent
-set scrolloff=4
-set showmatch
-
-set backspace=indent,eol,start
-
-set clipboard+=unnamedplus
 
 let g:auto_save = 1
 let g:auto_save_events = [
@@ -128,22 +147,6 @@ au Filetype python set autoindent
 au Filetype python set fileformat=unix
 autocmd Filetype python set foldmethod=indent
 autocmd Filetype python set foldlevel=99
-
-
-" ##################################Vim Color Setting##################################
-set background=dark
-set cursorline
-set mouse=a
-colorscheme gruvbox
-
-hi vertsplit ctermbg=bg guibg=bg
-hi GitGutterAdd ctermbg=bg guibg=bg
-hi GitGutterChange ctermbg=bg guibg=bg
-hi GitGutterDelete ctermbg=bg guibg=bg
-hi GitGutterChangeDelete ctermbg=bg guibg=bg
-hi SyntasticErrorSign ctermbg=bg guibg=bg
-hi SyntasticWarningSign ctermbg=bg guibg=bg
-hi FoldColumn ctermbg=bg guibg=bg
 
 
 " ##################################PlugIn Setting##################################
@@ -178,10 +181,9 @@ let g:NERDTreeIndicatorMapCustom = {
 \       'Unknown'  : '?'
 \   }
 
-" *************Indent Guide*************
-let g:indent_guides_enable_on_vim_startup = 1
-let g:indent_guides_start_level = 2
-let g:indent_guides_guide_size = 1
+" *************IndentLine*************
+let g:indentLine_char = '|'
+let g:indentLine_color_term = 239
 
 " *************Nerdcommenter*************
 let g:NERDSpaceDelims=1
@@ -234,7 +236,7 @@ let g:gutentags_plus_switch = 1
 " *************Tagbar*************
 map <silent> = :TagbarToggle<CR>
 let g:tagbar_type_go = {
-\       'ctagstype' : 'go',
+\       'ctagstype': 'go',
 \       'kinds': [
 \           'p:package',
 \           'i:imports:1',
