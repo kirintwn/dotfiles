@@ -2,9 +2,8 @@ export XDG_CONFIG_HOME="$HOME"/.config
 export XDG_CACHE_HOME="$HOME"/.cache
 export XDG_DATA_HOME="$HOME"/.local/share
 
-# mkdir -p "$XDG_CONFIG_HOME"/{asdf,docker,aws}
-# mkdir -p "$XDG_DATA_HOME"/{zsh,zinit,zlua,node,asdf,docker-machine}
-# mkdir -p "$XDG_CACHE_HOME"/zcompdump
+# Please create some dirs for some program to use XDG base directory
+# Reference: scripts/provisioning/create-xdg-dir.sh
 
 # zsh
 export ZDOTDIR="$XDG_CONFIG_HOME"/zsh

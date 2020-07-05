@@ -39,14 +39,35 @@ dotfiles push origin master
 
 ## Restore dotfiles to new machine
 
-```bash
-alias dotfiles="git --git-dir=$HOME/dotfiles/ --work-tree=$HOME"
-git clone --bare git@github.com:USERNAME/dotfiles.git $HOME/dotfiles
+* Prerequisites: `curl`, `wget`, `git`, `svn`
 
-# please remove all conflict files in $HOME before running dotfiles checkout
-dotfiles checkout
-dotfiles config --local status.showUntrackedFiles no
-```
+* Installation:
+
+  1. Clone & checkout
+
+    ```bash
+    alias dotfiles="git --git-dir=$HOME/dotfiles/ --work-tree=$HOME"
+    git clone --bare git@github.com:USERNAME/dotfiles.git $HOME/dotfiles
+
+    # please remove all conflict files in $HOME before running dotfiles checkout
+    dotfiles checkout
+    dotfiles config --local status.showUntrackedFiles no
+    ```
+
+  2. Open a new zsh shell, wait `zinit` provisioning (would take a few minutes).
+
+  3. Create some directories for some program to use XDG base directory,
+    please see [`scripts/provisioning/create-xdg-dir.sh`](scripts/provisioning/create-xdg-dir.sh)
+    as a reference.
+
+  4. Install programming languages with `asdf`,
+    please see [`scripts/install-packages/asdf.sh`](scripts/install-packages/asdf.sh) as a reference.
+
+  5. Install some packages dependent on `node.js` & `python`,
+    please see [`scripts/install-packages/npm.sh`](scripts/install-packages/npm.sh)
+    & [`scripts/install-packages/pip.sh`](scripts/install-packages/pip.sh) as a reference.
+
+  6. you can now run `:checkhealth provider` in neovim to see if it works correctly.
 
 ## Caveats
 
@@ -54,7 +75,7 @@ dotfiles config --local status.showUntrackedFiles no
   Please see comments in `.zshenv` to provision those directories.
 
 * Zinit plugin `z.lua` needs `lua`, `lua` needs `asdf` & `asdf` needs `zinit`,
-  so you should install `lua` via [`./scripts/install-packages/asdf.sh`](./scripts/install-packages/asdf.sh),
+  so you should install `lua` via [`scripts/install-packages/asdf.sh`](scripts/install-packages/asdf.sh),
   then re-open a new shell to load `z.lua`.
 
 * The installation of `Python` is via [`asdf-python`](https://github.com/danhper/asdf-python).
@@ -66,8 +87,8 @@ dotfiles config --local status.showUntrackedFiles no
   and run `:PlugInstall` in neovim.
 
 * Some neovim's plugins needs node.js / python's neovim packages.
-  Please install those packages via scripts in [`./scripts/install-packages/pip.sh`](./scripts/install-packages/pip.sh)
-  & [`./scripts/install-packages/npm.sh`](./scripts/install-packages/npm.sh).
+  Please install those packages via scripts in [`scripts/install-packages/pip.sh`](scripts/install-packages/pip.sh)
+  & [`scripts/install-packages/npm.sh`](scripts/install-packages/npm.sh).
 
 ## References
 
