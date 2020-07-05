@@ -39,7 +39,7 @@ dotfiles push origin master
 
 ## Restore dotfiles to new machine
 
-* Prerequisites: `curl`, `wget`, `git`, `svn`
+* Prerequisites: `curl`, `wget`, `git`, `svn`, `GnuPG` & `zsh`
 
 * Installation:
 
@@ -68,6 +68,9 @@ dotfiles push origin master
     & [`scripts/install-packages/pip.sh`](scripts/install-packages/pip.sh) as a reference.
 
   6. you can now run `:checkhealth provider` in neovim to see if it works correctly.
+
+  7. you can install some (optional) packages via [`scripts/install-packages/brew.sh`](scripts/install-packages/brew.sh)
+    if you are using MacOS & Homebrew.
 
 ## Caveats
 
