@@ -14,7 +14,7 @@ if [[ $#h -gt 0 ]]; then
 fi
 
 # Component: fzf-tab
-# Purpose: provide cd preview
+# Purpose: provide cd, cat (bat) & vim (nvim) preview
 # Reference: https://github.com/Aloxaf/fzf-tab#configure
 local extract="
 # trim input
@@ -26,8 +26,13 @@ local realpath=\${ctxt[IPREFIX]}\${ctxt[hpre]}\$in
 realpath=\${(Qe)~realpath}
 "
 zstyle ":fzf-tab:*" single-group ""
-zstyle ":fzf-tab:complete:cd:*" extra-opts --preview=$extract'exa -1 --color=always --icons --group-directories-first $realpath'
-
+zstyle ":fzf-tab:complete:cd:*" extra-opts --preview=$extract'
+  exa -1 --color=always --icons --group-directories-first $realpath
+'
+zstyle ":fzf-tab:complete:(bat|nvim):*" extra-opts --preview=$extract'
+  bat --style=numbers --color=always --line-range :200 $realpath 2>/dev/null ||
+  exa -1 --color=always --icons --group-directories-first $realpath
+'
 
 # Component: fzf-tab & z.lua
 # Purpose: use input as query string when completing z.lua
