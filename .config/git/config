@@ -27,3 +27,9 @@
 
 [color]
   ui = auto
+
+[delta]
+  number = true
+  side-by-side = true
+  syntax-theme = TwoDark
+  zero-style = dim syntax

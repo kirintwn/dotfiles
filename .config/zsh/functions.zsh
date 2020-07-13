@@ -6,10 +6,3 @@
 function da() {
   git --git-dir=$HOME/dotfiles/ --work-tree=$HOME add $@
 }
-
-# Component: diff
-# Purpose: use delta as diff
-# Reference: https://github.com/dandavison/delta/pull/56
-function dt() {
-  diff -u $@ | delta --theme="Dracula"
-}
