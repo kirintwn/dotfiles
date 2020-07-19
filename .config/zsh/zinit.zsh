@@ -1,3 +1,11 @@
+declare -A ZINIT
+ZINIT[HOME_DIR]="$ZINITDIR"
+ZINIT[BIN_DIR]="$ZINITDIR"/bin
+ZINIT[PLUGINS_DIR]="$ZINITDIR"/plugins
+ZINIT[COMPLETIONS_DIR]="$ZINITDIR"/completions
+ZINIT[SNIPPETS_DIR]="$ZINITDIR"/snippets
+ZINIT[ZCOMPDUMP_PATH]="$XDG_CACHE_HOME"/zcompdump/zcompdump-zinit
+
 ### Zinit's installer
 if [[ ! -f "$ZINITDIR"/bin/zinit.zsh ]]; then
   print -P "%F{33}▓▒░ %F{220}Installing %F{33}DHARMA%F{220} Initiative Plugin Manager (%F{33}zdharma/zinit%F{220})…%f"

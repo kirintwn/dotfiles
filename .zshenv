@@ -10,14 +10,9 @@ export ZDOTDIR="$XDG_CONFIG_HOME"/zsh
 export HISTFILE="$XDG_DATA_HOME"/zsh/zsh_history
 
 # zinit
-declare -A ZINIT
+# declare -A ZINIT will have no effect on some terminal emulators like vscode & alacritty
+# move the block to ~/.config/zsh/zinit.zsh
 export ZINITDIR="$XDG_DATA_HOME"/zinit
-ZINIT[HOME_DIR]="$ZINITDIR"
-ZINIT[BIN_DIR]="$ZINITDIR"/bin
-ZINIT[PLUGINS_DIR]="$ZINITDIR"/plugins
-ZINIT[COMPLETIONS_DIR]="$ZINITDIR"/completions
-ZINIT[SNIPPETS_DIR]="$ZINITDIR"/snippets
-ZINIT[ZCOMPDUMP_PATH]="$XDG_CACHE_HOME"/zcompdump/zcompdump-zinit
 
 # z.lua
 export _ZL_DATA="$XDG_DATA_HOME"/zlua/.zlua
