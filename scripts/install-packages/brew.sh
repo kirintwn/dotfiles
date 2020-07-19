@@ -24,6 +24,7 @@ brew install --HEAD universal-ctags/universal-ctags/universal-ctags
 
 brew tap homebrew/cask-fonts
 
+brew cask install amethyst
 brew cask install iterm2
 brew cask install font-sourcecodepro-nerd-font
 brew cask install alacritty
