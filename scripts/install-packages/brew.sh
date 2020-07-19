@@ -26,6 +26,7 @@ brew tap homebrew/cask-fonts
 
 brew cask install iterm2
 brew cask install font-sourcecodepro-nerd-font
+brew cask install alacritty
 brew cask install iina
 
 brew cleanup
