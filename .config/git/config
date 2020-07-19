@@ -33,3 +33,5 @@
   side-by-side = true
   syntax-theme = TwoDark
   zero-style = dim syntax
+  file-style = bold yellow ul
+  hunk-header-decoration-style = none
