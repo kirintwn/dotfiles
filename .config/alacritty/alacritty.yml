@@ -56,6 +56,8 @@ schemes:
 colors: *relaxed
 
 key_bindings:
-  - { key: N,        mods: Command,    action: SpawnNewInstance }
-  - { key: Left,     mods: Alt,        chars: "\x1b\x62"        }
-  - { key: Right,    mods: Alt,        chars: "\x1b\x66"        }
+  - { key: T,      mods: Command,      action: SpawnNewInstance }
+  - { key: Left,   mods: Alt,          chars: "\x1b\x62"        } # move a word backward
+  - { key: Right,  mods: Alt,          chars: "\x1b\x66"        } # move a word forward
+  - { key: Left,   mods: Control|Alt,  chars: "\x17"            } # delete a word backward
+  - { key: Right,  mods: Control|Alt,  chars: "\x1b\x44"        } # delete a word forward
