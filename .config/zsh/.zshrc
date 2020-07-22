@@ -1,4 +1,4 @@
-typeset -ga sources
+declare -ga sources
 sources+="$ZDOTDIR/theme.zsh"
 sources+="$ZDOTDIR/environment.zsh"
 sources+="$ZDOTDIR/zinit.zsh"
