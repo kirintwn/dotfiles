@@ -27,7 +27,7 @@ font:
   use_thin_strokes: false
 
 schemes:
-  relaxed:  &relaxed
+  relaxed: &relaxed
     primary:
       background: '0x353a44'
       foreground: '0xd9d9d9'
@@ -55,7 +55,6 @@ schemes:
 colors: *relaxed
 
 key_bindings:
-  - { key: N,      mods: Command,      action: SpawnNewInstance }
   - { key: Left,   mods: Alt,          chars: "\x1b\x62"        } # move a word backward
   - { key: Right,  mods: Alt,          chars: "\x1b\x66"        } # move a word forward
   - { key: Left,   mods: Control|Alt,  chars: "\x17"            } # delete a word backward
