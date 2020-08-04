@@ -116,6 +116,8 @@ My lovely dotfiles, managed with git bare repository, adhering [XDG Base Directo
   Please install those packages via scripts in [`scripts/install-packages/pip.sh`](scripts/install-packages/pip.sh)
   & [`scripts/install-packages/npm.sh`](scripts/install-packages/npm.sh).
 
+- If some environment variables are not loaded in `~/.zshenv`, by copying the file using `sudo cp ~/.zshenv /etc/zshenv` may solve the problem.
+
 ## References
 
 - [Neovim Shortcuts By @lesley-tw](https://github.com/lesley-tw/.dotfiles#neovim-shortcuts)
