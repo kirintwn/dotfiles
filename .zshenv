@@ -43,9 +43,10 @@ export MACHINE_STORAGE_PATH="$XDG_DATA_HOME"/docker-machine
 # k9s
 export K9SCONFIG="$XDG_CONFIG_HOME"/k9s
 
-# aws-cli
+# aws cli & sdk
 export AWS_SHARED_CREDENTIALS_FILE="$XDG_CONFIG_HOME"/aws/credentials
 export AWS_CONFIG_FILE="$XDG_CONFIG_HOME"/aws/config
+export AWS_SDK_LOAD_CONFIG="true"
 
 # tealdeer (tldr)
 export TEALDEER_CONFIG_DIR="$XDG_CONFIG_HOME"/tealdeer
