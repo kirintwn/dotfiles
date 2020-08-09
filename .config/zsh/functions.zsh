@@ -4,5 +4,5 @@
 # Reference: https://stackoverflow.com/a/33191364
 #            https://unix.stackexchange.com/questions/550559/zsh-file-autocompletion-with-bare-git-repo
 function da() {
-  git --git-dir=$HOME/dotfiles/ --work-tree=$HOME add $@
+  git --git-dir="$HOME/dotfiles/" --work-tree="$HOME" add $@
 }
