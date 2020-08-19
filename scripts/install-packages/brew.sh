@@ -30,4 +30,6 @@ brew cask install font-sourcecodepro-nerd-font
 brew cask install alacritty
 brew cask install iina
 
+brew install khanhas/tap/spicetify-cli
+
 brew cleanup
