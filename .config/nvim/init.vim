@@ -168,7 +168,7 @@ let g:NERDTreeDirArrowExpandable = ''
 let g:NERDTreeDirArrowCollapsible = ''
 
 " *************Nerd Tree git*************
-let g:NERDTreeIndicatorMapCustom = {
+let g:NERDTreeGitStatusIndicatorMapCustom = {
 \       'Modified' : '✹',
 \       'Staged'   : '✚',
 \       'Untracked': '✭',
