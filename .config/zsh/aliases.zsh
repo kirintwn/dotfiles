@@ -4,6 +4,7 @@ alias d="dotfiles"
 
 alias ls="exa --color=always --icons --group-directories-first"
 alias tree="exa --color=always --icons --group-directories-first -T --git-ignore"
+alias l.='exa -a | rg "^\."'
 alias cat="bat"
 alias catp="bat -p"
 alias vi="nvim"
