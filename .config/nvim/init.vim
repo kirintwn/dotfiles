@@ -1,7 +1,17 @@
 filetype off 
 
 " ##################################Install Plugin##################################
-call plug#begin('~/.config/nvim/plugged')
+" Bootstrap Plug
+let autoload_plug_path = stdpath('data') . '/site/autoload/plug.vim'
+if !filereadable(autoload_plug_path)
+  silent execute '!curl -fLo ' . autoload_plug_path . ' --create-dirs 
+    \ "https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"'
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+unlet autoload_plug_path
+
+let pluginsPath = stdpath('data') . '/plugged'
+call plug#begin(pluginsPath)
 
 Plug 'mhinz/vim-startify'
 Plug 'morhetz/gruvbox'
@@ -51,6 +61,7 @@ Plug 'multilobyte/gtags-cscope'
 Plug 'sheerun/vim-polyglot'
 
 call plug#end()
+unlet pluginsPath
 
 " ##################################ShortCut setting##################################
 " ************switch between tabs************
