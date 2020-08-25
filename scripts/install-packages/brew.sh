@@ -15,7 +15,6 @@ brew install zsh
 brew install less
 brew install gnupg
 brew install neofetch
-brew install aws-iam-authenticator
 brew install kubectl
 brew install derailed/k9s/k9s
 brew install tealdeer
@@ -24,9 +23,10 @@ brew install --HEAD universal-ctags/universal-ctags/universal-ctags
 
 brew tap homebrew/cask-fonts
 
+brew cask install font-sourcecodepro-nerd-font
+brew cask install font-fira-code-nerd-font
 brew cask install amethyst
 brew cask install iterm2
-brew cask install font-sourcecodepro-nerd-font
 brew cask install alacritty
 brew cask install iina
 
