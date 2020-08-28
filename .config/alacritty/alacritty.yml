@@ -3,8 +3,8 @@ window:
     columns: 125
     lines: 25
   padding:
-    x: 5
-    y: 5
+    x: 4
+    y: 4
   dynamic_title: true
 
 scrolling:
@@ -14,7 +14,7 @@ cursor:
   style: Beam
 
 font:
-  size: 18
+  size: 16
   normal:
     family: SauceCodePro Nerd Font
     style: Regular
@@ -25,6 +25,9 @@ font:
     family: SauceCodePro Nerd Font
     style: Regular
   use_thin_strokes: false
+  offset:
+    x: -1
+    y: -1
 
 schemes:
   relaxed: &relaxed
@@ -54,6 +57,8 @@ schemes:
       white:   '0xf7f7f7'
 colors: *relaxed
 
+mouse_bindings:
+  - { mouse: Middle, action: Copy }
 key_bindings:
   - { key: Left,   mods: Alt,          chars: "\x1b\x62"        } # move a word backward
   - { key: Right,  mods: Alt,          chars: "\x1b\x66"        } # move a word forward
