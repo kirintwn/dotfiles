@@ -23,13 +23,14 @@ brew install --HEAD universal-ctags/universal-ctags/universal-ctags
 # For Both Linux & MacOS
 brew install awscli
 brew install kubectl
-brew install derailed/k9s/k9s
+brew install k9s
 brew install tealdeer
 brew install croc
 
 # Casks (for MacOS only)
 brew tap homebrew/cask-fonts
 brew cask install font-fira-code-nerd-font
+brew cask install appcleaner
 brew cask install amethyst
 brew cask install karabiner-elements
 brew cask install bettertouchtool
