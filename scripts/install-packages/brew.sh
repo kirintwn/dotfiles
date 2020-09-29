@@ -23,7 +23,6 @@ brew install --HEAD universal-ctags/universal-ctags/universal-ctags
 
 brew tap homebrew/cask-fonts
 
-brew cask install font-sourcecodepro-nerd-font
 brew cask install font-fira-code-nerd-font
 brew cask install amethyst
 brew cask install iterm2
