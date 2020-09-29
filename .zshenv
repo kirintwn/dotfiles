@@ -52,9 +52,6 @@ export AWS_SDK_LOAD_CONFIG="true"
 export TEALDEER_CONFIG_DIR="$XDG_CONFIG_HOME/tealdeer"
 export TEALDEER_CACHE_DIR="$XDG_CACHE_HOME/tealdeer"
 
-# spicetify
-export SPICETIFY_CONFIG="$XDG_CONFIG_HOME/spicetify"
-
 # Disable unneeded histories
 ## less
 export LESSHISTFILE=-

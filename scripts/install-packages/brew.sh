@@ -15,6 +15,7 @@ brew install zsh
 brew install less
 brew install gnupg
 brew install neofetch
+brew install awscli
 brew install kubectl
 brew install derailed/k9s/k9s
 brew install tealdeer
@@ -28,7 +29,5 @@ brew cask install amethyst
 brew cask install iterm2
 brew cask install alacritty
 brew cask install iina
-
-brew install khanhas/tap/spicetify-cli
 
 brew cleanup
