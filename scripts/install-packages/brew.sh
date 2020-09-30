@@ -22,8 +22,9 @@ brew install --HEAD universal-ctags/universal-ctags/universal-ctags
 
 # For Both Linux & MacOS
 brew install awscli
-brew install kubectl
+brew install kubernetes-cli
 brew install k9s
+brew install helm
 brew install tealdeer
 brew install croc
 
