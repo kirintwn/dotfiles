@@ -48,10 +48,6 @@ zinit light ogham/exa
 zinit ice as"completion" mv"c* -> _exa"
 zinit snippet "https://github.com/ogham/exa/blob/master/contrib/completions.zsh"
 
-# jq
-zinit ice from"gh-r" as"program" mv"jq* -> jq"
-zinit light stedolan/jq
-
 # fd
 zinit ice as"program" from"gh-r" mv"fd* -> fd" pick"fd/fd"
 zinit light sharkdp/fd
