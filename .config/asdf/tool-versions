@@ -1,5 +1,5 @@
-nodejs 12.18.4
+nodejs 14.14.0
 python 3.9.0
-lua 5.4.0
-rust 1.46.0
-golang 1.15.2
+lua 5.4.1
+rust 1.47.0
+golang 1.15.3
