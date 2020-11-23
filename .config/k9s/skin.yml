@@ -1,0 +1,106 @@
+foreground: &foreground "#d9d9d9"
+background: &background "#353a44"
+current_line: &current_line "#24252b"
+selection: &selection "#24252b"
+comment: &comment "#727272"
+cyan: &cyan "#c9dfff"
+green: &green "#909d63"
+magenta: &magenta "#b06698"
+blue: &blue "#6a8799"
+red: &red "#bc5653"
+yellow: &yellow "#ebc17a"
+# white: &white "#f7f7f7"
+# black: &black "#f636363"
+
+k9s:
+  # General K9s styles
+  body:
+    fgColor: *foreground
+    bgColor: *background
+    logoColor: *blue
+  # ClusterInfoView styles.
+  info:
+    fgColor: *magenta
+    sectionColor: *foreground
+  # Dialog styles.
+  dialog:
+    fgColor: *foreground
+    bgColor: *background
+    buttonFgColor: *foreground
+    buttonBgColor: *blue
+    buttonFocusFgColor: *yellow
+    buttonFocusBgColor: *magenta
+    labelFgColor: *yellow
+    fieldFgColor: *foreground
+  frame:
+    # Borders styles.
+    border:
+      fgColor: *selection
+      focusColor: *current_line
+    menu:
+      fgColor: *foreground
+      keyColor: *magenta
+      # Used for favorite namespaces
+      numKeyColor: *magenta
+    # CrumbView attributes for history navigation.
+    crumbs:
+      fgColor: *foreground
+      bgColor: *current_line
+      activeColor: *current_line
+    # Resource status and update styles
+    status:
+      newColor: *blue
+      modifyColor: *blue
+      addColor: *green
+      errorColor: *red
+      highlightcolor: *yellow
+      killColor: *comment
+      completedColor: *comment
+    # Border title styles.
+    title:
+      fgColor: *foreground
+      bgColor: *current_line
+      highlightColor: *yellow
+      counterColor: *blue
+      filterColor: *magenta
+  views:
+    # Charts skins...
+    charts:
+      bgColor: default
+      defaultDialColors:
+        - *blue
+        - *red
+      defaultChartColors:
+        - *blue
+        - *red
+    # TableView attributes.
+    table:
+      fgColor: *foreground
+      bgColor: *background
+      cursorFgColor: *foreground
+      cursorBgColor: *current_line
+      # Header row styles.
+      header:
+        fgColor: *foreground
+        bgColor: *background
+        sorterColor: *cyan
+    # Xray view attributes.
+    xray:
+      fgColor: *foreground
+      bgColor: *background
+      cursorColor: *current_line
+      graphicColor: *blue
+      showIcons: false
+    # YAML info styles.
+    yaml:
+      keyColor: *magenta
+      colonColor: *blue
+      valueColor: *foreground
+    # Logs styles.
+    logs:
+      fgColor: *foreground
+      bgColor: *background
+      indicator:
+        fgColor: *foreground
+        bgColor: *blue
+
