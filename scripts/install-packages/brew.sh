@@ -30,22 +30,22 @@ brew install croc
 
 # Casks (for MacOS only)
 brew tap homebrew/cask-fonts
-brew cask install font-fira-code-nerd-font
-brew cask install appcleaner
-brew cask install amethyst
-brew cask install karabiner-elements
-brew cask install bettertouchtool
-brew cask install scroll-reverser
-brew cask install balance-lock
-brew cask install firefox
-brew cask install visual-studio-code
-brew cask install iterm2
-brew cask install alacritty
-brew cask install docker
-brew cask install telegram
-brew cask install spotify
-brew cask install iina
-brew cask install zoomus
-brew cask install microsoft-outlook
+brew install --cask font-fira-code-nerd-font
+brew install --cask appcleaner
+brew install --cask amethyst
+brew install --cask karabiner-elements
+brew install --cask bettertouchtool
+brew install --cask scroll-reverser
+brew install --cask balance-lock
+brew install --cask firefox
+brew install --cask visual-studio-code
+brew install --cask iterm2
+brew install --cask alacritty
+brew install --cask docker
+brew install --cask telegram
+brew install --cask spotify
+brew install --cask iina
+brew install --cask zoomus
+brew install --cask microsoft-outlook
 
 brew cleanup
