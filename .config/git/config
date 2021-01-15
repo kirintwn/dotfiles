@@ -19,6 +19,9 @@
   whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
   pager = delta
 
+[init]
+  defaultBranch = main
+
 [push]
   default = current
 
@@ -37,5 +40,6 @@
   file-decoration-style = none
   hunk-header-style = omit
   hunk-header-decoration-style = none
+
 [alias]
   ltag = log --simplify-by-decoration --tags --pretty='tformat:%C(auto)%h %as%d'
