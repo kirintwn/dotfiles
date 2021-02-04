@@ -2,4 +2,4 @@ nodejs 14.15.4
 python 3.9.1
 lua 5.4.2
 rust 1.49.0
-golang 1.15.6
+golang 1.15.7
