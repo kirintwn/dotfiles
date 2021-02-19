@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Prerequisites:
+# Prerequisites (for MacOS):
 # * Xcode - from Apple App Store
 # * Homebrew - /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
@@ -12,7 +12,6 @@ brew install zsh
 # To use zsh as default shell:
 # *	sudo sh -c "echo $(which zsh) >> /etc/shells" 
 # *	chsh -s $(which zsh)
-brew install git
 brew install subversion
 brew install less
 brew install gnupg
@@ -21,6 +20,7 @@ brew install neovim
 brew install --HEAD universal-ctags/universal-ctags/universal-ctags
 
 # For Both Linux & MacOS
+brew install git
 brew install awscli
 brew install kubernetes-cli
 brew install k9s
@@ -37,7 +37,7 @@ brew install --cask karabiner-elements
 brew install --cask bettertouchtool
 brew install --cask scroll-reverser
 brew install --cask balance-lock
-brew install --cask firefox
+brew install --cask google-chrome
 brew install --cask visual-studio-code
 brew install --cask iterm2
 brew install --cask alacritty
@@ -45,7 +45,7 @@ brew install --cask docker
 brew install --cask telegram
 brew install --cask spotify
 brew install --cask iina
-brew install --cask zoomus
+brew install --cask zoom
 brew install --cask microsoft-outlook
 
 brew cleanup
