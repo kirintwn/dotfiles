@@ -43,10 +43,10 @@ zinit ice as"program" from"gh-r" mv"bat* -> bat" pick"bat/bat"
 zinit light sharkdp/bat
 
 # exa
-zinit ice from"gh-r" as"program" mv"exa* -> exa"
+zinit ice from"gh-r" as"program" pick"**/exa"
 zinit light ogham/exa
-zinit ice as"completion" mv"c* -> _exa"
-zinit snippet "https://github.com/ogham/exa/blob/master/completions/completions.zsh"
+zinit ice as"completion"
+zinit snippet "https://github.com/ogham/exa/blob/master/completions/zsh/_exa"
 
 # fd
 zinit ice as"program" from"gh-r" mv"fd* -> fd" pick"fd/fd"
