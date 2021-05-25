@@ -34,7 +34,8 @@ My lovely dotfiles, managed with git bare repository, adhering [XDG Base Directo
 - Add an alias `dotfiles` to your `.zshrc`
 
   ```bash
-  alias dotfiles="git --git-dir=$HOME/.local/share/dotfiles/ --work-tree=$HOME"
+  # export XDG_DATA_HOME="$HOME/.local/share"
+  alias dotfiles="git --git-dir=$XDG_DATA_HOME/.local/share/dotfiles/ --work-tree=$HOME"
   ```
 
 - Set git status to hide untracked files
@@ -56,21 +57,22 @@ My lovely dotfiles, managed with git bare repository, adhering [XDG Base Directo
   dotfiles add $HOME/.config/git/*
   dotfiles commit -m "feat: add git config files"
 
-  dotfiles remote add origin git@github.com:USERNAME/dotfiles.git
-  dotfiles push origin master
+  dotfiles remote add origin git@github.com:kirintwn/dotfiles.git
+  dotfiles push origin main
   ```
 
 ## Restore dotfiles to a new machine
 
-- Prerequisites: `curl`, `wget`, `git`, `svn`, `GnuPG` & `zsh`
+- Prerequisites: `curl`, `wget`, `git`, `svn`, `unzip`, `GnuPG` & `zsh`
 
 - Installation:
 
   1. Clone & checkout
 
   ```bash
-  alias dotfiles="git --git-dir=$HOME/.local/share/dotfiles/ --work-tree=$HOME"
-  git clone --bare git@github.com:USERNAME/dotfiles.git $HOME/.local/share/dotfiles
+  export XDG_DATA_HOME="$HOME/.local/share"
+  alias dotfiles="git --git-dir=$XDG_DATA_HOME/.local/share/dotfiles/ --work-tree=$HOME"
+  git clone --bare git@github.com:kirintwn/dotfiles.git "$XDG_DATA_HOME/.local/share/dotfiles"
 
   # please remove all conflict files in $HOME before running dotfiles checkout
   dotfiles checkout
