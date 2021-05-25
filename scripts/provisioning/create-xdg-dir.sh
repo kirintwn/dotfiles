@@ -5,4 +5,5 @@ mkdir -p "$XDG_DATA_HOME"/{asdf,docker-machine,go,node,nvim,zinit,zlua,zsh}
 mkdir -p "$XDG_CACHE_HOME"/{tealdeer,zcompdump}
 
 touch "$XDG_CONFIG_HOME"/aws/{config,credentials}
+touch "$XDG_DATA_HOME/zlua/.zlua"
 mkdir -p "$HOME/.local/bin"
