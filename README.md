@@ -28,14 +28,15 @@ My lovely dotfiles, managed with git bare repository, adhering [XDG Base Directo
 - Create a dotfiles folder to track dotfiles
 
   ```bash
-  git init --bare "$HOME/.local/share/dotfiles"
+  export XDG_DATA_HOME="$HOME/.local/share"
+  git init --bare "$XDG_DATA_HOME/dotfiles"
   ```
 
 - Add an alias `dotfiles` to your `.zshrc`
 
   ```bash
-  # export XDG_DATA_HOME="$HOME/.local/share"
-  alias dotfiles="git --git-dir=$XDG_DATA_HOME/.local/share/dotfiles/ --work-tree=$HOME"
+  export XDG_DATA_HOME="$HOME/.local/share"
+  alias dotfiles="git --git-dir=$XDG_DATA_HOME/dotfiles/ --work-tree=$HOME"
   ```
 
 - Set git status to hide untracked files
@@ -71,8 +72,8 @@ My lovely dotfiles, managed with git bare repository, adhering [XDG Base Directo
 
   ```bash
   export XDG_DATA_HOME="$HOME/.local/share"
-  alias dotfiles="git --git-dir=$XDG_DATA_HOME/.local/share/dotfiles/ --work-tree=$HOME"
-  git clone --bare git@github.com:kirintwn/dotfiles.git "$XDG_DATA_HOME/.local/share/dotfiles"
+  alias dotfiles="git --git-dir=$XDG_DATA_HOME/dotfiles/ --work-tree=$HOME"
+  git clone --bare git@github.com:kirintwn/dotfiles.git "$XDG_DATA_HOME/dotfiles"
 
   # please remove all conflict files in $HOME before running dotfiles checkout
   dotfiles checkout
