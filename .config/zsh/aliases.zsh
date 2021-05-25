@@ -1,4 +1,4 @@
-alias dotfiles="git --git-dir=$HOME/dotfiles/ --work-tree=$HOME"
+alias dotfiles="git --git-dir=$XDG_DATA_HOME/dotfiles/ --work-tree=$HOME"
 alias d="dotfiles"
 # see functions.zsh for "dofiles add"'s alias "da"
 

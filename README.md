@@ -28,13 +28,13 @@ My lovely dotfiles, managed with git bare repository, adhering [XDG Base Directo
 - Create a dotfiles folder to track dotfiles
 
   ```bash
-  git init --bare $HOME/dotfiles
+  git init --bare "$HOME/.local/share/dotfiles"
   ```
 
 - Add an alias `dotfiles` to your `.zshrc`
 
   ```bash
-  alias dotfiles="git --git-dir=$HOME/dotfiles/ --work-tree=$HOME"
+  alias dotfiles="git --git-dir=$HOME/.local/share/dotfiles/ --work-tree=$HOME"
   ```
 
 - Set git status to hide untracked files
@@ -69,8 +69,8 @@ My lovely dotfiles, managed with git bare repository, adhering [XDG Base Directo
   1. Clone & checkout
 
   ```bash
-  alias dotfiles="git --git-dir=$HOME/dotfiles/ --work-tree=$HOME"
-  git clone --bare git@github.com:USERNAME/dotfiles.git $HOME/dotfiles
+  alias dotfiles="git --git-dir=$HOME/.local/share/dotfiles/ --work-tree=$HOME"
+  git clone --bare git@github.com:USERNAME/dotfiles.git $HOME/.local/share/dotfiles
 
   # please remove all conflict files in $HOME before running dotfiles checkout
   dotfiles checkout
