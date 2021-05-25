@@ -10,8 +10,8 @@
 #   name = kirin-hou                                        #
 #   email = kirin_hou@trendmicro.com                        #
 #############################################################
-[includeIf "gitdir:~/works/trend/"]
-  path = ~/works/trend/.gitconfig
+[includeIf "gitdir:~/Documents/works/trend/"]
+  path = ~/Documents/works/trend/.gitconfig
 
 [core]
   ignorecase = false
