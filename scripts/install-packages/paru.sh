@@ -45,9 +45,11 @@ paru -S fzf
 paru -S git-delta-bin
 paru -S fnm-bin
 paru -S bind
+paru -S traceroute
 paru -S neofetch
 paru -S neovim
 paru -S tealdeer
 paru -S aws-cli-v2-bin
 paru -S kubectl
 paru -S k9s
+paru -S helm

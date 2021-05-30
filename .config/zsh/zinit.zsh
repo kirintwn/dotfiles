@@ -28,12 +28,17 @@ zinit snippet OMZ::plugins/git/git.plugin.zsh
 zinit snippet OMZ::plugins/sudo/sudo.plugin.zsh
 zinit snippet OMZ::plugins/aws/aws.plugin.zsh
 zinit snippet OMZ::plugins/kubectl/kubectl.plugin.zsh
+zinit snippet OMZ::plugins/helm/helm.plugin.zsh
 zinit ice svn
 zinit snippet OMZ::plugins/extract
 
 # zsh-completions
 zinit ice blockf
 zinit light zsh-users/zsh-completions
+zinit ice as"completion"
+zinit snippet "https://github.com/docker/cli/blob/master/contrib/completion/zsh/_docker"
+zinit ice as"completion"
+zinit snippet "https://github.com/ogham/exa/blob/master/completions/zsh/_exa"
 
 # fzf key bindings - https://github.com/junegunn/fzf#key-bindings-for-command-line
 zinit snippet "https://github.com/junegunn/fzf/blob/master/shell/key-bindings.zsh"
