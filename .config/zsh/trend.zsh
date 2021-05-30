@@ -1,7 +1,3 @@
-# aws login cron job
-alias reload-credentials="launchctl unload -w $HOME/Library/LaunchAgents/com.aws.key.rotate.plist && \
-  launchctl load -w $HOME/Library/LaunchAgents/com.aws.key.rotate.plist"
-
 # eks config
 alias config-eks-spn-d="aws --profile spn-dev eks update-kubeconfig --name spn-eks-dev --alias spn-dev"
 alias config-eks-spn-s="aws --profile spn-stg eks update-kubeconfig --name spn-eks-stg --alias spn-stg"
