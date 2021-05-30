@@ -62,11 +62,30 @@ My lovely dotfiles, managed with git bare repository, adhering [XDG Base Directo
 
 ## Restore dotfiles to a new machine
 
-- Prerequisites: `curl`, `wget`, `git`, `svn`, `unzip`, `GnuPG`, `zsh`, `python`, `lua`, `nodejs`
+- Prerequisites:
+
+  - `curl`
+  - `wget`
+  - `git`
+  - `svn`
+  - `unzip`
+  - `GnuPG`
+  - `zsh`
+  - `python`
+  - `lua`
+  - `nodejs`
+  - `bat`
+  - `exa`
+  - `fd`
+  - `ripgrep`
+  - `fzf`
+  - `delta`
 
 - Installation:
 
-  1. Clone & checkout
+  1. you can install some prerequisites & optional packages via [`scripts/install-packages/paru.sh`](scripts/install-packages/paru.sh) if you are using Arch-based distros, or [`scripts/install-packages/brew.sh`](scripts/install-packages/brew.sh) if you are using MacOS.
+
+  2. Clone & checkout
 
   ```bash
   export XDG_DATA_HOME="$HOME/.local/share"
@@ -78,20 +97,17 @@ My lovely dotfiles, managed with git bare repository, adhering [XDG Base Directo
   dotfiles config --local status.showUntrackedFiles no
   ```
 
-  2. Open a new zsh shell, wait `zinit` provisioning (would take a few minutes).
+  3. Open a new zsh shell, wait `zinit` provisioning (would take a few minutes).
 
-  3. Create some directories for some program to use XDG base directory,
+  4. Create some directories for some program to use XDG base directory,
      please see [`scripts/provisioning/create-xdg-dir.sh`](scripts/provisioning/create-xdg-dir.sh)
      as a reference.
 
-  4. Install some packages dependent on `node.js` & `python`,
+  5. Install some packages dependent on `node.js` & `python`,
      please see [`scripts/install-packages/npm.sh`](scripts/install-packages/npm.sh)
      & [`scripts/install-packages/pip.sh`](scripts/install-packages/pip.sh) as a reference.
 
-  5. you can now run `:checkhealth provider` in neovim to see if it works correctly.
-
-  6. you can install some (optional) packages via [`scripts/install-packages/brew.sh`](scripts/install-packages/brew.sh)
-     if you are using MacOS & Homebrew.
+  6. you can now run `:checkhealth provider` in neovim to see if it works correctly.
 
 ## Caveats
 

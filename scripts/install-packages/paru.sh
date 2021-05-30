@@ -37,6 +37,12 @@ paru -S spotify
 paru -S flameshot
 paru -S f5vpn
 
+paru -S bat
+paru -S exa
+paru -S fd
+paru -S ripgrep
+paru -S fzf
+paru -S git-delta-bin
 paru -S fnm-bin
 paru -S bind
 paru -S neofetch

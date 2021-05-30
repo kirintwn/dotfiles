@@ -21,6 +21,12 @@ brew install neofetch
 brew install neovim
 brew install --HEAD universal-ctags/universal-ctags/universal-ctags
 brew install lua
+brew install bat
+brew install exa
+brew install fd
+brew install ripgrep
+brew install fzf
+brew install git-delta
 
 brew install awscli
 brew install kubernetes-cli

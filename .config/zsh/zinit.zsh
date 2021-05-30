@@ -35,33 +35,8 @@ zinit snippet OMZ::plugins/extract
 zinit ice blockf
 zinit light zsh-users/zsh-completions
 
-# bat
-zinit ice as"program" from"gh-r" mv"bat* -> bat" pick"bat/bat"
-zinit light sharkdp/bat
-
-# exa
-zinit ice from"gh-r" as"program" pick"**/exa"
-zinit light ogham/exa
-zinit ice as"completion"
-zinit snippet "https://github.com/ogham/exa/blob/master/completions/zsh/_exa"
-
-# fd
-zinit ice as"program" from"gh-r" mv"fd* -> fd" pick"fd/fd"
-zinit light sharkdp/fd
-
-# rg
-zinit ice as"program" from"gh-r" mv"ripgrep* -> ripgrep" pick"ripgrep/rg"
-zinit light BurntSushi/ripgrep
-
-# fzf
-zinit ice from"gh-r" as"program"
-zinit light junegunn/fzf-bin
-zinit snippet "https://github.com/junegunn/fzf/blob/master/shell/completion.zsh"
+# fzf key bindings - https://github.com/junegunn/fzf#key-bindings-for-command-line
 zinit snippet "https://github.com/junegunn/fzf/blob/master/shell/key-bindings.zsh"
-
-# delta
-zinit ice as"program" from"gh-r" mv"delta* -> delta" pick"delta/delta"
-zinit light dandavison/delta
 
 # z.lua
 zinit light skywind3000/z.lua
