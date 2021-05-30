@@ -1,26 +1,27 @@
 #!/usr/bin/env bash
 
-# Prerequisites (for MacOS):
-# * Xcode - from Apple App Store
-# * Homebrew - /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+# Prerequisites:
+# * Xcode CLT - xcode-select --install
+# * Homebrew - /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 brew update
 brew upgrade
 
-# For MacOS only
+
 brew install zsh
 # To use zsh as default shell:
 # *	sudo sh -c "echo $(which zsh) >> /etc/shells" 
 # *	chsh -s $(which zsh)
+
+brew install git
 brew install subversion
 brew install less
 brew install gnupg
 brew install neofetch
 brew install neovim
 brew install --HEAD universal-ctags/universal-ctags/universal-ctags
+brew install lua
 
-# For Both Linux & MacOS
-brew install git
 brew install awscli
 brew install kubernetes-cli
 brew install k9s
@@ -28,11 +29,10 @@ brew install helm
 brew install tealdeer
 brew install croc
 
-# Casks (for MacOS only)
 brew tap homebrew/cask-fonts
 brew install --cask font-fira-code-nerd-font
 brew install --cask appcleaner
-brew install --cask amethyst
+brew install --cask yabai
 brew install --cask karabiner-elements
 brew install --cask bettertouchtool
 brew install --cask scroll-reverser

@@ -22,11 +22,6 @@ ZINIT[ZCOMPDUMP_PATH]="$XDG_CACHE_HOME/zcompdump/zcompdump-zinit"
 # z.lua
 export _ZL_DATA="$XDG_DATA_HOME/zlua/.zlua"
 
-# asdf
-export ASDF_CONFIG_FILE="$XDG_CONFIG_HOME/asdf/asdfrc"
-export ASDF_DEFAULT_TOOL_VERSIONS_FILENAME="$XDG_CONFIG_HOME/asdf/tool-versions"
-export ASDF_DATA_DIR="$XDG_DATA_HOME/asdf"
-
 # node.js
 export NODE_REPL_HISTORY="$XDG_DATA_HOME/node/node_repl_history"
 

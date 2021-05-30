@@ -7,7 +7,6 @@ My lovely dotfiles, managed with git bare repository, adhering [XDG Base Directo
 - ZSH config
 
   - zinit config
-    - some binaries including asdf
 
 - Git config
 
@@ -16,7 +15,6 @@ My lovely dotfiles, managed with git bare repository, adhering [XDG Base Directo
 - Misc config
 
   - Terminal emulator config (iterm2, Alacritty, windows terminal...)
-  - asdf config
   - bat config
   - tealdeer config
   - k9s config
@@ -64,7 +62,7 @@ My lovely dotfiles, managed with git bare repository, adhering [XDG Base Directo
 
 ## Restore dotfiles to a new machine
 
-- Prerequisites: `curl`, `wget`, `git`, `svn`, `unzip`, `GnuPG` & `zsh`
+- Prerequisites: `curl`, `wget`, `git`, `svn`, `unzip`, `GnuPG`, `zsh`, `python`, `lua`, `nodejs`
 
 - Installation:
 
@@ -86,40 +84,25 @@ My lovely dotfiles, managed with git bare repository, adhering [XDG Base Directo
      please see [`scripts/provisioning/create-xdg-dir.sh`](scripts/provisioning/create-xdg-dir.sh)
      as a reference.
 
-  4. Install programming languages with `asdf`,
-     please see [`scripts/install-packages/asdf.sh`](scripts/install-packages/asdf.sh) as a reference.
-
-  5. Install some packages dependent on `node.js` & `python`,
+  4. Install some packages dependent on `node.js` & `python`,
      please see [`scripts/install-packages/npm.sh`](scripts/install-packages/npm.sh)
      & [`scripts/install-packages/pip.sh`](scripts/install-packages/pip.sh) as a reference.
 
-  6. you can now run `:checkhealth provider` in neovim to see if it works correctly.
+  5. you can now run `:checkhealth provider` in neovim to see if it works correctly.
 
-  7. you can install some (optional) packages via [`scripts/install-packages/brew.sh`](scripts/install-packages/brew.sh)
+  6. you can install some (optional) packages via [`scripts/install-packages/brew.sh`](scripts/install-packages/brew.sh)
      if you are using MacOS & Homebrew.
 
 ## Caveats
 
 - Some packages will failed to write config / data if the target directory not exists.
-  Please see comments in `.zshenv` to provision those directories.
+  Please see comments in `.zshenv` to provision those directories or run [`scripts/provisioning/create-xdg-dir.sh`](scripts/provisioning/create-xdg-dir.sh).
 
-- Zinit plugin `z.lua` needs `lua`, `lua` needs `asdf` & `asdf` needs `zinit`,
-  so you should install `lua` via [`scripts/install-packages/asdf.sh`](scripts/install-packages/asdf.sh),
-  then re-open a new shell to load `z.lua`.
-
-- The installation of `Python` is via [`asdf-python`](https://github.com/danhper/asdf-python).
-  Please see [common build problem in pyenv](https://github.com/pyenv/pyenv/wiki/Common-build-problems)
-  if you encountered any problem.
-
-- Neovim needs [`junegunn/vim-plug`](https://github.com/junegunn/vim-plug),
-  please follow the [installation guide](https://github.com/junegunn/vim-plug#installation),
-  and run `:PlugInstall` in neovim.
-
-- Some neovim's plugins needs node.js / python's neovim packages.
+- Some neovim's plugins needs nodejs / python's neovim packages.
   Please install those packages via scripts in [`scripts/install-packages/pip.sh`](scripts/install-packages/pip.sh)
   & [`scripts/install-packages/npm.sh`](scripts/install-packages/npm.sh).
 
-- If some environment variables are not loaded in `~/.zshenv`, by copying the file using `sudo cp ~/.zshenv /etc/zshenv` may solve the problem.
+- If some environment variables are not loaded in `~/.zshenv`, by copying the file using `sudo cp ~/.zshenv /etc/zsh/zshenv # (or /etc/zshenv for MacOS)` may solve the problem.
 
 ## References
 
