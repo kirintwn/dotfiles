@@ -53,3 +53,9 @@ paru -S aws-cli-v2-bin
 paru -S kubectl
 paru -S k9s
 paru -S helm
+paru -S docker
+# sudo groupadd docker
+# sudo usermod -aG docker $USER
+# newgrp docker
+# sudo systemctl enable docker
+# sudo systemctl start docker
