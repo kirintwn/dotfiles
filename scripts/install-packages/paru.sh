@@ -59,3 +59,4 @@ paru -S docker
 # newgrp docker
 # sudo systemctl enable docker
 # sudo systemctl start docker
+paru -S docker-compose-bin
