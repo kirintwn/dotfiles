@@ -37,7 +37,6 @@ paru -S telegram-desktop
 # curl -sS https://download.spotify.com/debian/pubkey_0D811D58.gpg | gpg --import -
 paru -S spotify
 paru -S flameshot
-paru -S f5vpn
 
 paru -S subversion
 paru -S unzip
