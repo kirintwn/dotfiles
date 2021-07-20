@@ -136,11 +136,16 @@ set $ws10 "10"
 # use workspaces on different displays:
 # where you have to replace VGA-0/HDMI-0 with the names for your displays 
 # you can get from xrandr command
-#workspace $ws1 output VGA-0
-#workspace $ws2 output VGA-0
-#workspace $ws3 output HDMI-0
-#workspace $ws4 output HDMI-0
-#workspace $ws5 output HDMI-0
+#workspace $ws1 output DP-4
+#workspace $ws2 output DP-4
+#workspace $ws3 output DP-4
+#workspace $ws4 output DP-4
+#workspace $ws5 output DP-4
+#workspace $ws6 output HDMI-0
+#workspace $ws7 output HDMI-0
+#workspace $ws8 output HDMI-0
+#workspace $ws9 output HDMI-0
+#workspace $ws10 output HDMI-0
 
 # bind program to workspace and focus to them on startup:
 #assign [class="Xfce4-terminal"] $ws1
@@ -411,9 +416,9 @@ bindsym Print exec --no-startup-id flameshot gui
 # startup applications
 for_window [instance="__scratchpad"] move scratchpad
 for_window [class="Spotify"] move to workspace $ws10
-for_window [class="TelegramDesktop"] move to workspace $ws10
+for_window [class="TelegramDesktop"] move to workspace $ws5
 
 exec --no-startup-id fcitx5
-exec --no-startup-id alacritty --class __scratchpad
+exec --no-startup-id sleep 2 && alacritty --class __scratchpad
 exec --no-startup-id sleep 3 && spotify
 exec --no-startup-id telegram-desktop
