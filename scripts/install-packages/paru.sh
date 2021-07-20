@@ -31,8 +31,8 @@ paru -S pavucontrol
 
 paru -S google-chrome
 paru -S alacritty
-paru -S visual-studio-code-bin
 # paru -S gnome-keyring
+paru -S visual-studio-code-bin
 paru -S telegram-desktop
 # curl -sS https://download.spotify.com/debian/pubkey_0D811D58.gpg | gpg --import -
 paru -S spotify
@@ -49,15 +49,15 @@ paru -S ripgrep
 paru -S fzf
 paru -S git-delta
 paru -S fnm-bin
-# fnm list-remote; fnm install vX.Y.Z; fnm default vX.Y.Z;
+# fnm list-remote
+# fnm install vX.Y.Z
+# fnm default vX.Y.Z
 paru -S python
 paru -S python-pip
 paru -S lua
-paru -S bind
-paru -S traceroute
-paru -S neofetch
+
 paru -S neovim
-paru -S tealdeer
+
 paru -S aws-cli-v2-bin
 paru -S kubectl
 paru -S k9s
@@ -69,3 +69,13 @@ paru -S docker
 # sudo systemctl enable docker
 # sudo systemctl start docker
 paru -S docker-compose-bin
+paru -S trivy
+paru -S earthly-bin
+
+paru -S htop
+paru -S neofetch
+paru -S dmidecode
+paru -S bind
+paru -S traceroute
+paru -S tealdeer
+paru -S croc
