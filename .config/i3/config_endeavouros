@@ -419,6 +419,6 @@ for_window [class="Spotify"] move to workspace $ws10
 for_window [class="TelegramDesktop"] move to workspace $ws5
 
 exec --no-startup-id fcitx5
-exec --no-startup-id sleep 2 && alacritty --class __scratchpad
-exec --no-startup-id sleep 3 && spotify
-exec --no-startup-id telegram-desktop
+exec --no-startup-id sleep 3 && alacritty --class __scratchpad
+exec --no-startup-id sleep 4 && spotify
+exec --no-startup-id sleep 5 && telegram-desktop
