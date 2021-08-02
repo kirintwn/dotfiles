@@ -7,11 +7,11 @@
 # reference: https://git-scm.com/docs/git-config#_includes  #
 #                                                           #
 # [user]                                                    #
-#   name = kirin-hou                                        #
-#   email = kirin_hou@trendmicro.com                        #
+#   name = kirintwn                                         #
+#   email = kirin@xendit.co                                 #
 #############################################################
-# [includeIf "gitdir:~/Documents/works/trend/"]
-#   path = ~/Documents/works/trend/.gitconfig
+[includeIf "gitdir:~/Documents/works/xendit/"]
+  path = ~/Documents/works/xendit/.gitconfig
 
 [core]
   ignorecase = false
