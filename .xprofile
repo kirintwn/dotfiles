@@ -1,0 +1,3 @@
+if ! lsusb | grep -i 'ZOWIE.*mouse'; then
+  xmodmap -e 'pointer = 3 2 1'
+fi
