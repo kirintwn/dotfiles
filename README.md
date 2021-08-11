@@ -14,10 +14,11 @@ My lovely dotfiles, managed with git bare repository, adhering [XDG Base Directo
 
 - Misc config
 
-  - Terminal emulator config (iterm2, Alacritty, windows terminal...)
+  - alacritty config
   - bat config
   - tealdeer config
   - k9s config
+  - i3 config
 
 - Scripts for provisioning & installation of some packages
 
