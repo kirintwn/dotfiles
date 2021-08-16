@@ -58,6 +58,7 @@ paru -S lua
 
 paru -S neovim
 
+paru -S terraform
 paru -S aws-cli-v2-bin
 paru -S kubectl
 paru -S k9s

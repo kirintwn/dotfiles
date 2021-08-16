@@ -39,6 +39,8 @@ zinit ice as"completion"
 zinit snippet "https://github.com/docker/cli/blob/master/contrib/completion/zsh/_docker"
 zinit ice as"completion"
 zinit snippet "https://github.com/ogham/exa/blob/master/completions/zsh/_exa"
+zinit ice as"completion"
+zinit snippet "https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/terraform/_terraform"
 
 # fzf key bindings - https://github.com/junegunn/fzf#key-bindings-for-command-line
 zinit snippet "https://github.com/junegunn/fzf/blob/master/shell/key-bindings.zsh"

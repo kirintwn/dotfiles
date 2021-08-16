@@ -10,6 +10,7 @@ alias cat="bat"
 alias catp="bat -p"
 alias vi="nvim"
 alias vim="nvim"
+alias tf="terraform"
 
 # print each PATH entry on a separate line
 alias printpath='print -rl $path'
