@@ -1,3 +1,7 @@
+# set keyboard repeat rate
+xset r rate 200 40
+
+# revert mouse left right button if needed 
 if ! lsusb | grep -i 'ZOWIE.*mouse'; then
   xmodmap -e 'pointer = 3 2 1'
 fi
