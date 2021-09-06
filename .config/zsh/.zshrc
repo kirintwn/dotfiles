@@ -5,6 +5,7 @@ sources+="$ZDOTDIR/zinit.zsh"
 sources+="$ZDOTDIR/aliases.zsh"
 sources+="$ZDOTDIR/functions.zsh"
 sources+="$ZDOTDIR/misc.zsh"
+sources+="$ZDOTDIR/xendit.zsh"
 
 foreach file (`echo $sources`)
   if [[ -a $file ]]; then
