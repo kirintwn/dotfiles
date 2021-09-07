@@ -11,6 +11,8 @@ alias catp="bat -p"
 alias vi="nvim"
 alias vim="nvim"
 alias tf="terraform"
+alias python="python3"
+alias pip="pip3"
 
 # print each PATH entry on a separate line
 alias printpath='print -rl $path'
