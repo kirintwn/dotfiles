@@ -16,6 +16,8 @@ export ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
 export ZSH_AUTOSUGGEST_USE_ASYNC=1
 export ZSH_AUTOSUGGEST_MANUAL_REBIND=1
 
+export PATH="$PATH:$HOME/.local/bin"
+
 if command -v fnm &> /dev/null; then
   eval "$(fnm env)"
 fi
