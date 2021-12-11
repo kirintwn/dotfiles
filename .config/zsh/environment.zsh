@@ -2,6 +2,9 @@ export TERM="xterm-256color"
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
+export HISTSIZE=10000000
+export SAVEHIST=10000000
+
 export VISUAL=nvim
 export EDITOR="$VISUAL"
 
@@ -16,7 +19,8 @@ export ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
 export ZSH_AUTOSUGGEST_USE_ASYNC=1
 export ZSH_AUTOSUGGEST_MANUAL_REBIND=1
 
-export PATH="$PATH:$HOME/.local/bin"
+path+="$HOME/.local/bin"
+export PATH
 
 if command -v fnm &> /dev/null; then
   eval "$(fnm env)"
