@@ -69,9 +69,9 @@ paru -S docker
 # newgrp docker
 # sudo systemctl enable docker
 # sudo systemctl start docker
-paru -S docker-compose-bin
+paru -S docker-compose
 paru -S trivy
-paru -S earthly-bin
+paru -S earthly
 
 paru -S htop
 paru -S neofetch
