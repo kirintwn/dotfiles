@@ -38,6 +38,8 @@ zinit light zsh-users/zsh-completions
 zinit ice as"completion"
 zinit snippet "https://github.com/ogham/exa/blob/master/completions/zsh/_exa"
 zinit ice as"completion"
+zinit snippet "https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/docker-compose/_docker-compose"
+zinit ice as"completion"
 zinit snippet "https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/terraform/_terraform"
 
 # fzf key bindings - https://github.com/junegunn/fzf#key-bindings-for-command-line
