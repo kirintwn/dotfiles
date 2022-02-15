@@ -48,6 +48,7 @@ paru -S fd
 paru -S ripgrep
 paru -S fzf
 paru -S git-delta
+paru -S jless
 paru -S fnm-bin
 # fnm list-remote
 # fnm install vX.Y.Z
