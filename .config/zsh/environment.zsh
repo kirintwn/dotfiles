@@ -22,6 +22,7 @@ export ZSH_AUTOSUGGEST_MANUAL_REBIND=1
 export DOCKER_BUILDKIT=1
 
 path+="$HOME/.local/bin"
+path+="$GOBIN"
 export PATH
 
 if command -v fnm &> /dev/null; then
