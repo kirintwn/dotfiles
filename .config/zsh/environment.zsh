@@ -21,6 +21,8 @@ export ZSH_AUTOSUGGEST_MANUAL_REBIND=1
 
 export DOCKER_BUILDKIT=1
 
+export SSH_AUTH_SOCK=~/.1password/agent.sock
+
 path+="$HOME/.local/bin"
 path+="$GOBIN"
 export PATH

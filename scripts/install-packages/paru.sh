@@ -81,3 +81,6 @@ paru -S bind
 paru -S traceroute
 paru -S tealdeer
 paru -S croc
+
+paru -S 1password
+paru -S 1password-cli

@@ -25,7 +25,6 @@ font:
   italic:
     family: FiraCode Nerd Font
     style: Italic
-  use_thin_strokes: true
   offset:
     x: 0
     y: 0

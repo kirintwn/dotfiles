@@ -1,6 +1,7 @@
 [user]
   name = kirintwn
-  email = cy91244@gmail.com
+  email = me@kirintw.me
+  signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIyxG7FgngiJTErYyNxg03KoNPkwaSSqQCUkzmvLm5hk
 
 #############################################################
 # switch / replace git user conditionally                   #
@@ -10,6 +11,7 @@
 #   name = kirintwn                                         #
 #   email = kirin@xendit.co                                 #
 #############################################################
+
 [includeIf "gitdir:~/Documents/works/xendit/"]
   path = ~/Documents/works/xendit/.gitconfig
 
@@ -33,6 +35,15 @@
 
 [color]
   ui = auto
+
+[gpg]
+  format = ssh
+
+[gpg "ssh"]
+  program = "/opt/1Password/op-ssh-sign"
+
+[commit]
+  gpgsign = true
 
 [delta]
   number = true
