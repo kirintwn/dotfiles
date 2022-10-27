@@ -5,6 +5,7 @@
 brew update
 brew upgrade
 
+brew install coreutils
 brew install git
 brew install subversion
 brew install less
@@ -22,6 +23,8 @@ brew install fd
 brew install ripgrep
 brew install fzf
 brew install git-delta
+brew install jq
+brew install jless
 
 brew install terraform
 brew install awscli
@@ -46,4 +49,6 @@ brew install --cask bettertouchtool
 brew install --cask yabai
 brew install --cask iina
 brew install --cask zoom
+brew install --cask 1password
+brew install --cask 1password-cli
 brew cleanup
