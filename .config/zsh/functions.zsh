@@ -96,5 +96,5 @@ function dsdelete() {
 # Purpose: list all secret files from the 1password vault
 function dslist() {
   VAULT="dotfiles"
-  op document list --vault "$VAULT"
+  op document list --vault "$VAULT" | (sed -u 1q; sort -k 2)
 }
