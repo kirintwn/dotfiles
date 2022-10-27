@@ -91,3 +91,10 @@ function dsdelete() {
   echo "Deleting secret $TITLE"
   op document delete "$TITLE" --vault "$VAULT"
 }
+
+# Component: 1password-cli
+# Purpose: list all secret files from the 1password vault
+function dslist() {
+  VAULT="dotfiles"
+  op document list --vault "$VAULT"
+}
