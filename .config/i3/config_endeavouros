@@ -394,17 +394,17 @@ bindsym $mod+Shift+grave move scratchpad
 bindsym $mod+grave scratchpad show
 
 # open program launcher
-bindsym $mod+d exec rofi -modi drun -show drun -display-drun "Apps : " -line-padding 4 \
-                -columns 2 -padding 50 -hide-scrollbar \
-                -show-icons -drun-icon-theme "Arc-X-D" -font "Noto Sans Regular 11"
+bindsym $mod+d exec rofi -modi drun -show drun -display-drun "Apps " -line-padding 4 \
+                -show-icons -drun-icon-theme "Arc-X-D" -font "Noto Sans Regular 18" \
+        				-config ~/.config/rofi/rofidmenu.rasi
 
 # open window menu
-bindsym $mod+w exec rofi -show window -display-window "Window : " -line-padding 4 \
-                -lines 10 -padding 50 -hide-scrollbar \
-                -show-icons -drun-icon-theme "Arc-X-D" -font "Noto Sans Regular 11"
+bindsym $mod+w exec rofi -show window -display-window "Window " -line-padding 4 \
+                -show-icons -drun-icon-theme "Arc-X-D" -font "Noto Sans Regular 18" \
+        				-config ~/.config/rofi/rofidmenu.rasi
 
 # exit-menu
-bindsym $mod+Shift+e exec ~/.config/i3/scripts/shutdown_menu -p rofi -c
+bindsym $mod+Shift+e exec ~/.config/i3/scripts/powermenu rofi -theme ~/.config/rofi/powermenu.rasi
 
 # start applications
 bindsym $mod+Return exec alacritty
@@ -418,6 +418,7 @@ for_window [instance="__scratchpad"] move scratchpad
 for_window [class="Spotify"] move to workspace $ws10
 for_window [class="TelegramDesktop"] move to workspace $ws5
 
+exec --no-startup-id sleep 2 && 1password --silent
 exec --no-startup-id sleep 3 && alacritty --class __scratchpad
 exec --no-startup-id sleep 4 && spotify
 exec --no-startup-id sleep 5 && telegram-desktop
