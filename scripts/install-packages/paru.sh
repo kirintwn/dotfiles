@@ -65,6 +65,7 @@ paru -S kubectl
 paru -S k9s
 paru -S helm
 paru -S docker
+paru -S kafkactl
 # sudo groupadd docker
 # sudo usermod -aG docker $USER
 # newgrp docker

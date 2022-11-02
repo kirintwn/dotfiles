@@ -33,6 +33,8 @@ brew install k9s
 brew install helm
 brew install tealdeer
 brew install croc
+brew tap deviceinsight/packages
+brew install deviceinsight/packages/kafkactl
 
 brew tap homebrew/cask-fonts
 brew install --cask font-fira-code-nerd-font
