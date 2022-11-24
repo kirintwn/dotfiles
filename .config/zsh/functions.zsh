@@ -53,7 +53,6 @@ function dspull() {
   FILE_PATH_RELATIVE_TO_HOME=$(realpath --relative-to="$HOME" "$INPUT_FILE_PATH")
   FILE_PATH_ABSOLUTE=$(realpath "$INPUT_FILE_PATH")
   TITLE="~/$FILE_PATH_RELATIVE_TO_HOME"
-  FILE_NAME=$(basename ${FILE_PATH_ABSOLUTE})
 
   echo "Pulling $FILE_PATH_ABSOLUTE"
 
@@ -62,7 +61,6 @@ function dspull() {
     op document get "$TITLE" --vault "$VAULT" --output "$FILE_PATH_ABSOLUTE" --force
   else
     echo "Item with the title \"$TITLE\" does not exist in the 1password vault"
-    rm "$FILE_PATH_ABSOLUTE"
   fi
 }
 
@@ -79,6 +77,41 @@ function dspullall() {
 }
 
 # Component: 1password-cli
+# Purpose: compare a secret file between remote and local
+function dsdiff() {
+  VAULT="dotfiles"
+  INPUT_FILE_PATH="$1"
+  FILE_PATH_RELATIVE_TO_HOME=$(realpath --relative-to="$HOME" "$INPUT_FILE_PATH")
+  FILE_PATH_ABSOLUTE=$(realpath "$INPUT_FILE_PATH")
+  TITLE="~/$FILE_PATH_RELATIVE_TO_HOME"
+
+  echo "Comparing the remote secret with local file $FILE_PATH_ABSOLUTE"
+
+  if [ ! -f "$FILE_PATH_ABSOLUTE" ]; then
+    echo "File "$FILE_PATH_ABSOLUTE" not found locally"
+    return 1
+  fi
+
+  if op document get "$TITLE" --vault "$VAULT" > /dev/null 2>&1; then
+    op document get "$TITLE" --vault "$VAULT" | delta - "$FILE_PATH_ABSOLUTE"
+  else
+    echo "Item with the title \"$TITLE\" does not exist in the 1password vault"
+  fi
+}
+
+# Component: 1password-cli
+# Purpose: compare all secret files between remote and local
+function dsdiffall() {
+  VAULT="dotfiles"
+  TITLES=$(op document list --vault "$VAULT" --format json | jq -r '.[].title')
+
+  echo $TITLES | while read title ; do
+    FILE_PATH_ABSOLUTE="$HOME/${title#"~/"}"
+    dsdiff "$FILE_PATH_ABSOLUTE"
+  done
+}
+
+# Component: 1password-cli
 # Purpose: delete a secret file from the 1password vault
 function dsdelete() {
   VAULT="dotfiles"
@@ -86,7 +119,6 @@ function dsdelete() {
   FILE_PATH_RELATIVE_TO_HOME=$(realpath --relative-to="$HOME" "$INPUT_FILE_PATH")
   FILE_PATH_ABSOLUTE=$(realpath "$INPUT_FILE_PATH")
   TITLE="~/$FILE_PATH_RELATIVE_TO_HOME"
-  FILE_NAME=$(basename ${FILE_PATH_ABSOLUTE})
 
   echo "Deleting secret $TITLE"
   op document delete "$TITLE" --vault "$VAULT"
