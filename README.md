@@ -88,20 +88,22 @@ My lovely dotfiles, managed with git bare repository, adhering [XDG Base Directo
 
   2. Clone & checkout
 
-  ```bash
-  export XDG_DATA_HOME="$HOME/.local/share"
-  alias dotfiles="git --git-dir=$XDG_DATA_HOME/dotfiles/ --work-tree=$HOME"
-  git clone --bare git@github.com:kirintwn/dotfiles.git "$XDG_DATA_HOME/dotfiles"
+     You can use [`scripts/provisioning/setup.sh`](scripts/provisioning/setup.sh) or clone manually using the commands below:
 
-  # please remove all conflict files in $HOME before running dotfiles checkout
-  dotfiles checkout
-  dotfiles config --local status.showUntrackedFiles no
-  ```
+     ```bash
+     export XDG_DATA_HOME="$HOME/.local/share"
+     alias dotfiles="git --git-dir=$XDG_DATA_HOME/dotfiles/ --work-tree=$HOME"
+     git clone --bare git@github.com:kirintwn/dotfiles.git "$XDG_DATA_HOME/dotfiles"
+
+     # please remove all conflict files in $HOME before running dotfiles checkout
+     dotfiles checkout
+     dotfiles config --local status.showUntrackedFiles no
+     ```
 
   3. Open a new zsh shell, wait `zinit` provisioning (would take a few minutes).
 
   4. Create some directories for some program to use XDG base directory,
-     please see [`scripts/provisioning/create-xdg-dir.sh`](scripts/provisioning/create-xdg-dir.sh)
+     please see [`scripts/provisioning/setup.sh`](scripts/provisioning/setup.sh)
      as a reference.
 
   5. Install some packages dependent on `node.js` & `python`,
@@ -113,7 +115,7 @@ My lovely dotfiles, managed with git bare repository, adhering [XDG Base Directo
 ## Caveats
 
 - Some packages will failed to write config / data if the target directory not exists.
-  Please see comments in `.zshenv` to provision those directories or run [`scripts/provisioning/create-xdg-dir.sh`](scripts/provisioning/create-xdg-dir.sh).
+  Please see comments in `.zshenv` to provision those directories or run [`scripts/provisioning/setup.sh`](scripts/provisioning/setup.sh).
 
 - Some neovim's plugins needs nodejs / python's neovim packages.
   Please install those packages via scripts in [`scripts/install-packages/pip.sh`](scripts/install-packages/pip.sh)
