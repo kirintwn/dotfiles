@@ -14,7 +14,7 @@
 
 paru -S noto-fonts-cjk
 paru -S noto-fonts-emoji
-paru -S nerd-fonts-fira-code
+paru -S ttf-firacode-nerd
 # fc-cache -fv
 # reboot
 
