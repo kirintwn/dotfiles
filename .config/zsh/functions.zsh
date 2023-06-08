@@ -130,3 +130,16 @@ function dslist() {
   VAULT="dotfiles"
   op document list --vault "$VAULT" | (sed -u 1q; sort -k 2)
 }
+
+# Component: 1password-cli
+# Purpose: fetch all ssh public keys from the 1password vault
+function fetchkeys() {
+  VAULT="Private"
+  KEY_TITLES=$(op item list --vault "$VAULT" --categories "SSH Key" --format json | jq -r '.[].title')
+
+  echo $KEY_TITLES | while read key_title ; do
+    PUBLIC_KEY_FILE_PATH_ABSOLUTE="$HOME/.ssh/$key_title.pub"
+    echo "Fetching public key $PUBLIC_KEY_FILE_PATH_ABSOLUTE"
+    op read "op://$VAULT/$key_title/public key" > "$PUBLIC_KEY_FILE_PATH_ABSOLUTE"
+  done
+}
