@@ -7,3 +7,4 @@ sudo mkdir -p /opt/1password
 sudo ln -s /Applications/1Password.app/Contents/MacOS/op-ssh-sign /opt/1password/op-ssh-sign
 
 ln -s /usr/local/opt/openvpn/sbin/openvpn $HOME/.local/bin/openvpn
+ln -s /usr/local/bin/grealpath $HOME/.local/bin/realpath

@@ -23,8 +23,8 @@ export DOCKER_BUILDKIT=1
 
 export SSH_AUTH_SOCK="$HOME/.1password/agent.sock"
 
-path+="$HOME/.local/bin"
-path+="$GOBIN"
+PATH="$GOBIN:$PATH"
+PATH="$HOME/.local/bin:$PATH"
 export PATH
 
 if command -v fnm &> /dev/null; then
