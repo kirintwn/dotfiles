@@ -44,10 +44,6 @@ export AWS_SHARED_CREDENTIALS_FILE="$XDG_CONFIG_HOME/aws/credentials"
 export AWS_CONFIG_FILE="$XDG_CONFIG_HOME/aws/config"
 export AWS_SDK_LOAD_CONFIG="true"
 
-# tealdeer (tldr)
-export TEALDEER_CONFIG_DIR="$XDG_CONFIG_HOME/tealdeer"
-export TEALDEER_CACHE_DIR="$XDG_CACHE_HOME/tealdeer"
-
 # Disable unneeded histories
 ## less
 export LESSHISTFILE=-

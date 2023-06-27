@@ -25,3 +25,6 @@ bold = false
 [display]
 compact = false
 use_pager = true
+
+[directories]
+cache_dir = "/home/kirintw/.cache/tealdeer/"
