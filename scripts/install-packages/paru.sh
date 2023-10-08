@@ -18,23 +18,15 @@ paru -S ttf-firacode-nerd
 # fc-cache -fv
 # reboot
 
-paru -S fcitx5-im # all deps: fcitx5, fcitx5-configtool, fcitx5-gtk, fcitx5-qt
+paru -S fcitx5-im # including all deps: fcitx5, fcitx5-configtool, fcitx5-gtk, fcitx5-qt
 paru -S fcitx5-chewing
 # reboot
 # fcitx5-configtool
 
-paru -S pulseaudio
-paru -S pulseaudio-alsa
-paru -S pulseaudio-bluetooth
-paru -S pavucontrol
-# reboot
-
 paru -S google-chrome
 paru -S alacritty
-# paru -S gnome-keyring
 paru -S visual-studio-code-bin
 paru -S telegram-desktop
-# curl -sS https://download.spotify.com/debian/pubkey_0D811D58.gpg | gpg --import -
 paru -S spotify
 paru -S flameshot
 
@@ -71,9 +63,13 @@ paru -S kafkactl
 # newgrp docker
 # sudo systemctl enable docker
 # sudo systemctl start docker
-paru -S docker-compose
+# export DOCKER_CONFIG=$HOME/.config/docker
+# mkdir -p $DOCKER_CONFIG/cli-plugins
+# curl -SL https://github.com/docker/compose/releases/download/v2.22.0/docker-compose-linux-x86_64 -o $DOCKER_CONFIG/cli-plugins/docker-compose
+# chmod +x $DOCKER_CONFIG/cli-plugins/docker-compose
+# docker compose version
 paru -S trivy
-paru -S earthly
+paru -S earthly-bin
 
 paru -S htop
 paru -S neofetch
@@ -85,3 +81,7 @@ paru -S croc
 
 paru -S 1password
 paru -S 1password-cli
+
+paru -S gnome-keyring
+paru -S picom
+paru -S blueman
