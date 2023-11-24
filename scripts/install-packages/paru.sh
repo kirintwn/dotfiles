@@ -77,6 +77,7 @@ paru -S croc
 paru -S 1password
 paru -S 1password-cli
 
+paru -S xclip
 paru -S gnome-keyring
 # ref: https://wiki.archlinux.org/title/GNOME/Keyring#PAM_step
 # edit the PAM config file: /etc/pam.d/login
