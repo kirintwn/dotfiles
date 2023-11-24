@@ -36,7 +36,7 @@ zinit snippet OMZ::plugins/extract
 zinit ice blockf
 zinit light zsh-users/zsh-completions
 zinit ice as"completion"
-zinit snippet "https://github.com/ogham/exa/blob/master/completions/zsh/_exa"
+zinit snippet "https://github.com/eza-community/eza/blob/main/completions/zsh/_eza"
 zinit ice as"completion"
 zinit snippet "https://github.com/ohmyzsh/ohmyzsh/blob/master/plugins/docker-compose/_docker-compose"
 

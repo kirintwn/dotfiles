@@ -16,11 +16,11 @@ fi
 # Component: fzf-tab
 # Purpose: provide cd, cat (bat) & vim (nvim) preview
 # Reference: https://github.com/Aloxaf/fzf-tab/wiki/Preview
-zstyle ':fzf-tab:complete:cd:*' fzf-preview 'exa -1 --color=always --icons --group-directories-first $realpath'
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --color=always --icons --group-directories-first $realpath'
 
 zstyle ':fzf-tab:complete:(bat|nvim):*' fzf-preview '
   bat --style=numbers --color=always --line-range :200 $realpath 2>/dev/null ||
-  exa -1 --color=always --icons --group-directories-first $realpath
+  eza -1 --color=always --icons --group-directories-first $realpath
 '
 
 # Component: fzf-tab & z.lua

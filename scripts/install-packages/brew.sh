@@ -18,7 +18,7 @@ brew install fnm
 brew install python
 brew install lua
 brew install bat
-brew install exa
+brew install eza
 brew install fd
 brew install ripgrep
 brew install fzf

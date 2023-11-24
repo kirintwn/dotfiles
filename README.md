@@ -76,7 +76,7 @@ My lovely dotfiles, managed with git bare repository, adhering [XDG Base Directo
   - `lua`
   - `nodejs`
   - `bat`
-  - `exa`
+  - `eza`
   - `fd`
   - `ripgrep`
   - `fzf`

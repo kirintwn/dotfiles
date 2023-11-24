@@ -57,6 +57,7 @@ mkdir -p "$XDG_CONFIG_HOME"/{alacritty,aws,bat,docker,k9s,nvim,tealdeer,zsh}
 mkdir -p "$XDG_DATA_HOME"/{docker-machine,go,node,nvim,zinit,zlua,zsh}
 mkdir -p "$XDG_CACHE_HOME"/{tealdeer,zcompdump}
 mkdir -p "$XDG_CACHE_HOME/zinit/completions" # zinit helm zsh plugin workaround
+mkdir -p "$HOME/Documents/works/personal"
 
 touch "$XDG_CONFIG_HOME"/aws/{config,credentials}
 touch "$XDG_DATA_HOME/zlua/.zlua"

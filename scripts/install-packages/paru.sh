@@ -12,11 +12,8 @@
 #     makepkg -si
 #     paru
 
-paru -S noto-fonts-cjk
-paru -S noto-fonts-emoji
 paru -S ttf-firacode-nerd
 # fc-cache -fv
-# reboot
 
 paru -S fcitx5-im # including all deps: fcitx5, fcitx5-configtool, fcitx5-gtk, fcitx5-qt
 paru -S fcitx5-chewing
@@ -31,11 +28,10 @@ paru -S spotify
 paru -S flameshot
 
 paru -S subversion
-paru -S unzip
 paru -S zsh
 # chsh -s $(which zsh)
 paru -S bat
-paru -S exa
+paru -S eza
 paru -S fd
 paru -S ripgrep
 paru -S fzf
@@ -45,19 +41,18 @@ paru -S fnm-bin
 # fnm list-remote
 # fnm install vX.Y.Z
 # fnm default vX.Y.Z
-paru -S python
 paru -S python-pip
 paru -S lua
 
 paru -S neovim
 
 paru -S tfenv
-paru -S aws-cli-v2-bin
+paru -S aws-cli-v2
 paru -S kubectl
 paru -S k9s
 paru -S helm
-paru -S docker
 paru -S kafkactl
+paru -S docker
 # sudo groupadd docker
 # sudo usermod -aG docker $USER
 # newgrp docker
@@ -83,5 +78,9 @@ paru -S 1password
 paru -S 1password-cli
 
 paru -S gnome-keyring
+# ref: https://wiki.archlinux.org/title/GNOME/Keyring#PAM_step
+# edit the PAM config file: /etc/pam.d/login
+#   add "auth       optional     pam_gnome_keyring.so"            at the end of the auth section
+#   add "session    optional     pam_gnome_keyring.so auto_start" at the end of the session section
 paru -S picom
 paru -S blueman

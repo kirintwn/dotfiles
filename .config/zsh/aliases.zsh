@@ -3,9 +3,9 @@ alias dotfiles="git --git-dir=$XDG_DATA_HOME/dotfiles/ --work-tree=$HOME"
 alias d="dotfiles"
 # see functions.zsh for "dofiles add" alias "da"
 
-alias ls="exa --color=always --icons --group-directories-first"
-alias tree="exa --color=always --icons --group-directories-first -T --git-ignore"
-alias l.='exa -a | rg "^\."'
+alias ls="eza --color=always --icons --group-directories-first"
+alias tree="eza --color=always --icons --group-directories-first -T --git-ignore"
+alias l.='eza -a | rg "^\."'
 alias cat="bat"
 alias catp="bat -p"
 alias vi="nvim"
