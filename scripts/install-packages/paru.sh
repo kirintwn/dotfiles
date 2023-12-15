@@ -45,6 +45,7 @@ paru -S python-pip
 paru -S lua
 
 paru -S neovim
+# git clone https://github.com/LazyVim/starter ~/.config/nvim
 
 paru -S tfenv
 paru -S aws-cli-v2
@@ -63,6 +64,8 @@ paru -S docker
 # curl -SL https://github.com/docker/compose/releases/download/v2.22.0/docker-compose-linux-x86_64 -o $DOCKER_CONFIG/cli-plugins/docker-compose
 # chmod +x $DOCKER_CONFIG/cli-plugins/docker-compose
 # docker compose version
+paru -S docker-buildx
+paru -S chamber
 paru -S trivy
 paru -S earthly-bin
 

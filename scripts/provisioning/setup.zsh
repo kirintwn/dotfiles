@@ -78,4 +78,4 @@ fetchkeys
 alias dotfiles="git --git-dir=$XDG_DATA_HOME/dotfiles/ --work-tree=$HOME"
 git clone --bare git@github.com:kirintwn/dotfiles.git "$XDG_DATA_HOME/dotfiles"
 dotfiles checkout
-dotfiles config --local status.showUntrackedFiles
+dotfiles config --local status.showUntrackedFiles no

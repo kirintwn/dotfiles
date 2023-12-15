@@ -10,8 +10,6 @@ My lovely dotfiles, managed with git bare repository, adhering [XDG Base Directo
 
 - Git config
 
-- NeoVim config
-
 - Misc config
 
   - alacritty config
@@ -117,15 +115,9 @@ My lovely dotfiles, managed with git bare repository, adhering [XDG Base Directo
 - Some packages will failed to write config / data if the target directory not exists.
   Please see comments in `.zshenv` to provision those directories or run [`scripts/provisioning/setup.sh`](scripts/provisioning/setup.sh).
 
-- Some neovim's plugins needs nodejs / python's neovim packages.
-  Please install those packages via scripts in [`scripts/install-packages/pip.sh`](scripts/install-packages/pip.sh)
-  & [`scripts/install-packages/npm.sh`](scripts/install-packages/npm.sh).
-
 - If some environment variables are not loaded in `~/.zshenv`, by copying the file using `sudo cp ~/.zshenv /etc/zsh/zshenv # (or /etc/zshenv for MacOS)` may solve the problem.
 
 ## References
-
-- [Neovim Shortcuts By @lesley-tw](https://github.com/lesley-tw/.dotfiles#neovim-shortcuts)
 
 - [[ArchLinux Wiki] XDG Base Directory](https://wiki.archlinux.org/index.php/XDG_Base_Directory)
 
