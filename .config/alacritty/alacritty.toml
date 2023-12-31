@@ -1,0 +1,88 @@
+[colors.bright]
+black = "0x636363"
+blue = "0x7eaac7"
+cyan = "0xacbbd0"
+green = "0x909d63"
+magenta = "0xb06698"
+red = "0xbc5653"
+white = "0xf7f7f7"
+yellow = "0xebc17a"
+
+[colors.cursor]
+cursor = "0xd9d9d9"
+text = "0x000000"
+
+[colors.normal]
+black = "0x151515"
+blue = "0x6a8799"
+cyan = "0xc9dfff"
+green = "0x909d63"
+magenta = "0xb06698"
+red = "0xbc5653"
+white = "0xd9d9d9"
+yellow = "0xebc17a"
+
+[colors.primary]
+background = "0x353a44"
+foreground = "0xd9d9d9"
+
+[cursor]
+style = "Beam"
+
+[font]
+size = 14
+
+[font.bold]
+family = "FiraCode Nerd Font"
+style = "Medium"
+
+[font.italic]
+family = "FiraCode Nerd Font"
+style = "Italic"
+
+[font.normal]
+family = "FiraCode Nerd Font"
+style = "Regular"
+
+[font.offset]
+x = 0
+y = 0
+
+[[keyboard.bindings]]
+chars = "\u001Bb"
+key = "Left"
+mods = "Alt"
+
+[[keyboard.bindings]]
+chars = "\u001Bf"
+key = "Right"
+mods = "Alt"
+
+[[keyboard.bindings]]
+chars = "\u0017"
+key = "Left"
+mods = "Control|Alt"
+
+[[keyboard.bindings]]
+chars = "\u001BD"
+key = "Right"
+mods = "Control|Alt"
+
+[[mouse.bindings]]
+action = "Copy"
+mouse = "Middle"
+
+[scrolling]
+history = 100000
+
+[window]
+dynamic_title = true
+opacity = 0.9
+
+[window.dimensions]
+columns = 125
+lines = 25
+
+[window.padding]
+x = 4
+y = 4
