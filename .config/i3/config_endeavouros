@@ -143,7 +143,7 @@ bindsym $mod+a focus parent
 bindsym $mod+Shift+grave move scratchpad
 
 # Show the next scratchpad window or hide the focused scratchpad window.
-bindsym $mod+grave scratchpad show, resize set 65 ppt 70 ppt, move position center
+bindsym $mod+grave [instance="__scratchpad"] scratchpad show, resize set 65 ppt 70 ppt, move position center
 
 # switch to workspace
 bindsym $mod+1    workspace  $ws1
