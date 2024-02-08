@@ -86,7 +86,13 @@ My lovely dotfiles, managed with git bare repository, adhering [XDG Base Directo
 
   2. Clone & checkout
 
-     You can use [`scripts/provisioning/setup.sh`](scripts/provisioning/setup.sh) or clone manually using the commands below:
+     You can use [`scripts/provisioning/setup.zsh`](scripts/provisioning/setup.zsh) by
+
+     ```bash
+     curl -sL https://raw.githubusercontent.com/kirintwn/dotfiles/main/scripts/provisioning/setup.zsh | zsh
+     ```
+
+     or clone manually using the commands below:
 
      ```bash
      export XDG_DATA_HOME="$HOME/.local/share"
@@ -101,19 +107,13 @@ My lovely dotfiles, managed with git bare repository, adhering [XDG Base Directo
   3. Open a new zsh shell, wait `zinit` provisioning (would take a few minutes).
 
   4. Create some directories for some program to use XDG base directory,
-     please see [`scripts/provisioning/setup.sh`](scripts/provisioning/setup.sh)
+     please see [`scripts/provisioning/setup.zsh`](scripts/provisioning/setup.zsh)
      as a reference.
-
-  5. Install some packages dependent on `node.js` & `python`,
-     please see [`scripts/install-packages/npm.sh`](scripts/install-packages/npm.sh)
-     & [`scripts/install-packages/pip.sh`](scripts/install-packages/pip.sh) as a reference.
-
-  6. you can now run `:checkhealth provider` in neovim to see if it works correctly.
 
 ## Caveats
 
 - Some packages will failed to write config / data if the target directory not exists.
-  Please see comments in `.zshenv` to provision those directories or run [`scripts/provisioning/setup.sh`](scripts/provisioning/setup.sh).
+  Please see comments in `.zshenv` to provision those directories or run [`scripts/provisioning/setup.zsh`](scripts/provisioning/setup.zsh).
 
 - If some environment variables are not loaded in `~/.zshenv`, by copying the file using `sudo cp ~/.zshenv /etc/zsh/zshenv # (or /etc/zshenv for MacOS)` may solve the problem.
 

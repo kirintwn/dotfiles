@@ -59,10 +59,8 @@ paru -S docker
 # newgrp docker
 # sudo systemctl enable docker
 # sudo systemctl start docker
-# export DOCKER_CONFIG=$HOME/.config/docker
-# mkdir -p $DOCKER_CONFIG/cli-plugins
-# curl -SL https://github.com/docker/compose/releases/download/v2.22.0/docker-compose-linux-x86_64 -o $DOCKER_CONFIG/cli-plugins/docker-compose
-# chmod +x $DOCKER_CONFIG/cli-plugins/docker-compose
+# docker ps
+paru -S docker-compose
 # docker compose version
 paru -S docker-buildx
 paru -S chamber
