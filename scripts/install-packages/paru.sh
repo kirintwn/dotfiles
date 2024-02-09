@@ -27,6 +27,7 @@ paru -S telegram-desktop
 paru -S spotify
 paru -S flameshot
 
+paru -S rsync
 paru -S subversion
 paru -S zsh
 # chsh -s $(which zsh)
@@ -75,14 +76,16 @@ paru -S traceroute
 paru -S tealdeer
 paru -S croc
 
-paru -S 1password
-paru -S 1password-cli
-
 paru -S xclip
 paru -S gnome-keyring
 # ref: https://wiki.archlinux.org/title/GNOME/Keyring#PAM_step
 # edit the PAM config file: /etc/pam.d/login
 #   add "auth       optional     pam_gnome_keyring.so"            at the end of the auth section
 #   add "session    optional     pam_gnome_keyring.so auto_start" at the end of the session section
+# may need to reboot once or twice, check if 1password 2FA and VSCode sign-in works
+
+paru -S 1password
+paru -S 1password-cli
+
 paru -S picom
 paru -S blueman
