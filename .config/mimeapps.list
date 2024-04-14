@@ -1,0 +1,15 @@
+[Default Applications]
+application/pdf=google-chrome.desktop
+application/rdf+xml=google-chrome.desktop
+application/rss+xml=google-chrome.desktop
+application/xhtml+xml=google-chrome.desktop
+application/xhtml_xml=google-chrome.desktop
+application/xml=google-chrome.desktop
+text/html=google-chrome.desktop
+text/xml=google-chrome.desktop
+x-scheme-handler/http=google-chrome.desktop
+x-scheme-handler/https=google-chrome.desktop
+x-scheme-handler/tg=userapp-Telegram Desktop-BCTD60.desktop
+
+[Added Associations]
+x-scheme-handler/tg=userapp-Telegram Desktop-BCTD60.desktop;
