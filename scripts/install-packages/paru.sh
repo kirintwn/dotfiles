@@ -24,6 +24,7 @@ paru -S google-chrome
 paru -S alacritty
 paru -S visual-studio-code-bin
 paru -S telegram-desktop
+paru -S discord_arch_electron
 paru -S spotify
 paru -S flameshot
 
@@ -75,6 +76,9 @@ paru -S bind
 paru -S traceroute
 paru -S tealdeer
 paru -S croc
+
+paru -S openvpn
+paru -S openvpn3
 
 paru -S xclip
 paru -S gnome-keyring

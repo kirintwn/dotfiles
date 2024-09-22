@@ -1,14 +1,14 @@
 # exec --no-startup-id ~/set_once.sh
 # This file is a modified version based on default i3-config-wizard config
 # source is available here:
-# https://raw.githubusercontent.com/endeavouros-team/endeavouros-i3wm-setup/master/.config/i3/config
+# https://raw.githubusercontent.com/endeavouros-team/endeavouros-i3wm-setup/main/etc/skel/.config/i3/config
 # Maintainer: joekamprad [joekamprad //a_t// endeavouros.com]
 # https://endeavouros.com
 #
 # iconic font icon search: https://fontawesome.com/v4.7/cheatsheet/
 #
 # --> to update this run the following command (will backup existing setup file)
-# wget --backups=1 https://raw.githubusercontent.com/endeavouros-team/endeavouros-i3wm-setup/main/.config/i3/config -P ~/.config/i3/
+# wget --backups=1 https://raw.githubusercontent.com/endeavouros-team/endeavouros-i3wm-setup/main/etc/skel/.config/i3/config -P ~/.config/i3/
 #
 # Endeavouros-i3 config file
 # Source for complete framework of our i3 config and theming here: https://github.com/endeavouros-team/endeavouros-i3wm-setup
@@ -139,8 +139,8 @@ bindsym $mod+Shift+f floating toggle
 # focus the parent container
 bindsym $mod+a focus parent
 
-# move the currently focused window to the scratchpad
-bindsym $mod+Shift+grave move scratchpad
+# create a new alacritty instance to scratchpad
+bindsym $mod+Shift+grave exec --no-startup-id alacritty --class __scratchpad
 
 # Show the next scratchpad window or hide the focused scratchpad window.
 bindsym $mod+grave [instance="__scratchpad"] scratchpad show, resize set 65 ppt 70 ppt, move position center
@@ -216,8 +216,8 @@ bindsym XF86AudioMute exec --no-startup-id ~/.config/i3/scripts/volume_brightnes
 bindsym XF86AudioMicMute exec amixer sset Capture toggle
 
 # audio control
-bindsym XF86AudioPlay exec --no-startup-id playerctl play
-bindsym XF86AudioPause exec --no-startup-id playerctl pause
+bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
+# Above line will also work for pausing
 bindsym XF86AudioNext exec --no-startup-id playerctl next
 bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 
@@ -254,30 +254,30 @@ set $ws10 "10"
 # use workspaces on different displays:
 # where you have to replace VGA-0/HDMI-0 with the names for your displays
 # you can get from xrandr command
-workspace $ws1 output DP-2
-workspace $ws2 output DP-2
-workspace $ws3 output DP-2
-workspace $ws4 output DP-2
-workspace $ws5 output DP-2
-workspace $ws6 output DP-0
-workspace $ws7 output DP-0
-workspace $ws8 output DP-0
-workspace $ws9 output DP-0
-workspace $ws10 output DP-0
+workspace $ws1 output DP-4
+workspace $ws2 output DP-4
+workspace $ws3 output DP-4
+workspace $ws4 output DP-4
+workspace $ws5 output DP-4
+workspace $ws6 output DP-2
+workspace $ws7 output DP-2
+workspace $ws8 output DP-2
+workspace $ws9 output DP-2
+workspace $ws10 output DP-2
 
 # bind program to workspace and focus to them on startup:
 # assign [class="Xfce4-terminal"] $ws1
 # assign [class="(?i)firefox"] $ws2
 # assign [class="Thunar"] $ws3
 # assign [class="thunderbird"] $ws4
-assign [class="telegram-desktop"] $ws5
+# assign [class="TelegramDesktop"] $ws5
 
 # automatic set focus new window if it opens on another workspace than the current:
 # for_window [class=Xfce4-terminal] focus
 # for_window [class=(?i)firefox] focus
 # for_window [class=Thunar] focus
 # for_window [class=Thunderbird] focus
-for_window [class=telegram-desktop] focus
+# for_window [class=TelegramDesktop] focus
 
 ##############
 # compositor #
@@ -380,7 +380,7 @@ exec --no-startup-id /usr/bin/dunst
 # startup applications
 for_window [instance="__scratchpad"] move scratchpad
 for_window [class="Spotify"] move to workspace $ws10
-for_window [class="telegram-desktop"] move to workspace $ws5
+for_window [class="TelegramDesktop"] move to workspace $ws5
 
 exec --no-startup-id sleep 2 && 1password --silent
 exec --no-startup-id sleep 3 && alacritty --class __scratchpad
@@ -467,7 +467,7 @@ bar {
 #	    	i3bar_command i3bar --transparency
 # it could be that you have no primary display set: set one (xrandr --output <output> --primary)
 # reference: https://i3wm.org/docs/userguide.html#_tray_output
-		    #tray_output primary
+		    tray_output primary
 		    tray_padding 0
 
 # When strip_workspace_numbers is set to yes,
