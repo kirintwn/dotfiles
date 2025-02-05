@@ -134,7 +134,7 @@ function dslist() {
 # Component: 1password-cli
 # Purpose: fetch all ssh public keys from the 1password vault
 function fetchkeys() {
-  VAULT="Private"
+  VAULT="dotfiles"
   KEY_TITLES=$(op item list --vault "$VAULT" --categories "SSH Key" --format json | jq -r '.[].title')
 
   echo $KEY_TITLES | while read key_title ; do

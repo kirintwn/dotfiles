@@ -1,10 +1,3 @@
-export TERM="xterm-256color"
-export LANG=en_US.UTF-8
-export LC_ALL=en_US.UTF-8
-
-export HISTSIZE=10000000
-export SAVEHIST=10000000
-
 export VISUAL=nvim
 export EDITOR="$VISUAL"
 

@@ -39,7 +39,7 @@ function dspullall() {
 # Component: 1password-cli
 # Purpose: fetch all ssh public keys from the 1password vault
 function fetchkeys() {
-  VAULT="Private"
+  VAULT="dotfiles"
   KEY_TITLES=$(op item list --vault "$VAULT" --categories "SSH Key" --format json | jq -r '.[].title')
 
   echo $KEY_TITLES | while read key_title ; do
@@ -53,7 +53,7 @@ XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"
 XDG_CACHE_HOME="${XDG_CACHE_HOME:-$HOME/.cache}"
 XDG_DATA_HOME="${XDG_DATA_HOME:-$HOME/.local/share}"
 
-mkdir -p "$XDG_CONFIG_HOME"/{alacritty,aws,bat,docker,k9s,nvim,tealdeer,zsh}
+mkdir -p "$XDG_CONFIG_HOME"/{"1Password/ssh",alacritty,aws,bat,docker,k9s,nvim,tealdeer,zsh}
 mkdir -p "$XDG_DATA_HOME"/{docker-machine,go,node,nvim,zinit,zlua,zsh}
 mkdir -p "$XDG_CACHE_HOME"/{tealdeer,zcompdump}
 mkdir -p "$XDG_CACHE_HOME/zinit/completions" # zinit helm zsh plugin workaround

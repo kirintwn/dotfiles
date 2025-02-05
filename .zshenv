@@ -1,13 +1,19 @@
+export TERM="xterm-256color"
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_DATA_HOME="$HOME/.local/share"
 
 # Please create some dirs for some program to use XDG base directory
-# Reference: scripts/provisioning/create-xdg-dir.sh
+# Reference: scripts/provisioning/setup.sh
 
 # zsh
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
 export HISTFILE="$XDG_DATA_HOME/zsh/zsh_history"
+export HISTSIZE=10000000
+export SAVEHIST=10000000
 
 # zinit
 export ZINITDIR="$XDG_DATA_HOME/zinit"
