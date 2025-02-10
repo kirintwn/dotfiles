@@ -86,10 +86,10 @@ My lovely dotfiles, managed with git bare repository, adhering [XDG Base Directo
 
   2. Clone & checkout
 
-     You can use [`scripts/provisioning/setup.zsh`](scripts/provisioning/setup.zsh) by
+     You can use [`scripts/setup.zsh`](scripts/setup.zsh) by
 
      ```bash
-     curl -sL https://raw.githubusercontent.com/kirintwn/dotfiles/main/scripts/provisioning/setup.zsh | zsh
+     curl -sL https://raw.githubusercontent.com/kirintwn/dotfiles/main/scripts/setup.zsh | zsh
      ```
 
      or clone manually using the commands below:
@@ -107,13 +107,13 @@ My lovely dotfiles, managed with git bare repository, adhering [XDG Base Directo
   3. Open a new zsh shell, wait `zinit` provisioning (would take a few minutes).
 
   4. Create some directories for some program to use XDG base directory,
-     please see [`scripts/provisioning/setup.zsh`](scripts/provisioning/setup.zsh)
+     please see [`scripts/setup.zsh`](scripts/setup.zsh)
      as a reference.
 
 ## Caveats
 
 - Some packages will failed to write config / data if the target directory not exists.
-  Please see comments in `.zshenv` to provision those directories or run [`scripts/provisioning/setup.zsh`](scripts/provisioning/setup.zsh).
+  Please see comments in `.zshenv` to provision those directories or run [`scripts/setup.zsh`](scripts/setup.zsh).
 
 - If some environment variables are not loaded in `~/.zshenv`, by copying the file using `sudo cp ~/.zshenv /etc/zsh/zshenv # (or /etc/zshenv for MacOS)` may solve the problem.
 

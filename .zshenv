@@ -7,7 +7,7 @@ export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_DATA_HOME="$HOME/.local/share"
 
 # Please create some dirs for some program to use XDG base directory
-# Reference: scripts/provisioning/setup.sh
+# Reference: scripts/setup.sh
 
 # zsh
 export ZDOTDIR="$XDG_CONFIG_HOME/zsh"
