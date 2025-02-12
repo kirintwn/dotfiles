@@ -23,6 +23,7 @@ paru -S fcitx5-chewing
 paru -S google-chrome
 paru -S alacritty
 paru -S visual-studio-code-bin
+paru -S dbeaver-ce-bin
 paru -S telegram-desktop
 paru -S vesktop-bin
 paru -S spotify

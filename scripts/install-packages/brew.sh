@@ -41,10 +41,13 @@ brew tap homebrew/cask-fonts
 brew install --cask font-fira-code-nerd-font
 brew install --cask google-chrome
 brew install --cask visual-studio-code
+brew install --cask dbeaver-community
 brew install --cask docker
 brew install --cask spotify
 brew install --cask telegram
+brew install --cask discord
 brew install --cask alacritty
+brew install --cask flameshot
 brew install --cask balance-lock
 brew install --cask scroll-reverser
 brew install --cask karabiner-elements
@@ -55,3 +58,7 @@ brew install --cask zoom
 brew install --cask 1password
 brew install --cask 1password-cli
 brew cleanup
+
+# Disable System Integrity Protection first
+brew install koekeishiya/formulae/yabai
+brew install koekeishiya/formulae/skhd

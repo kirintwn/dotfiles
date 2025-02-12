@@ -17,6 +17,9 @@ My lovely dotfiles, managed with git bare repository, adhering [XDG Base Directo
   - tealdeer config
   - k9s config
   - i3 config
+  - karabiner (for MacOS)
+  - yabai config (for MacOS)
+  - skhd config (for MacOS)
 
 - Scripts for provisioning & installation of some packages
 
