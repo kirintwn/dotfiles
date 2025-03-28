@@ -13,6 +13,7 @@ x-scheme-handler/tg=userapp-Telegram Desktop-BCTD60.desktop
 x-scheme-handler/webcal=google-chrome.desktop
 x-scheme-handler/tonsite=org.telegram.desktop.desktop
 x-scheme-handler/postman=Postman.desktop
+x-scheme-handler/discord=vesktop.desktop
 
 [Added Associations]
 x-scheme-handler/tg=userapp-Telegram Desktop-BCTD60.desktop;
