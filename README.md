@@ -113,6 +113,8 @@ My lovely dotfiles, managed with git bare repository, adhering [XDG Base Directo
      please see [`scripts/setup.zsh`](scripts/setup.zsh)
      as a reference.
 
+  5. Modify `~/.config/i3/i3blocks.conf` & `~/.config/i3/config`, can use `~/.config/i3/config_endeavouros` as a reference.
+
 ## Caveats
 
 - Some packages will failed to write config / data if the target directory not exists.

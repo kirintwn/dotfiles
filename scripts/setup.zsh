@@ -63,6 +63,9 @@ touch "$XDG_CONFIG_HOME"/aws/{config,credentials}
 touch "$XDG_DATA_HOME/zlua/.zlua"
 mkdir -p "$HOME/.local/bin"
 
+rm -f "$HOME/.local/share/applications/mimeapps.list"
+rm -f "$HOME/.config/mimeapps.list"
+
 if [[ "$(uname -s)" == "Darwin" ]]; then
   mkdir -p "$HOME/.1password"
   ln -s "$HOME/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock" "$HOME/.1password/agent.sock"
@@ -79,3 +82,5 @@ alias dotfiles="git --git-dir=$XDG_DATA_HOME/dotfiles/ --work-tree=$HOME"
 git clone --bare git@github.com:kirintwn/dotfiles.git "$XDG_DATA_HOME/dotfiles"
 dotfiles checkout
 dotfiles config --local status.showUntrackedFiles no
+
+ln -s ~/.config/mimeapps.list ~/.local/share/applications/mimeapps.list

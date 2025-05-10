@@ -68,12 +68,9 @@ paru -S docker-compose
 paru -S docker-buildx
 paru -S chamber
 paru -S trivy
-paru -S earthly-bin
 
 paru -S htop
 paru -S neofetch
-paru -S dmidecode
-paru -S bind
 paru -S traceroute
 paru -S tealdeer
 paru -S croc
