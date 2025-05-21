@@ -252,13 +252,13 @@ set $ws9 "9"
 set $ws10 "10"
 
 # use workspaces on different displays:
-# where you have to replace VGA-0/HDMI-0 with the names for your displays
+# where you have to replace DP-0/DP-2 with the names for your displays
 # you can get from xrandr command
-workspace $ws1 output DP-4
-workspace $ws2 output DP-4
-workspace $ws3 output DP-4
-workspace $ws4 output DP-4
-workspace $ws5 output DP-4
+workspace $ws1 output DP-0
+workspace $ws2 output DP-0
+workspace $ws3 output DP-0
+workspace $ws4 output DP-0
+workspace $ws5 output DP-0
 workspace $ws6 output DP-2
 workspace $ws7 output DP-2
 workspace $ws8 output DP-2
