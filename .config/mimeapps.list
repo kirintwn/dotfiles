@@ -19,3 +19,4 @@ x-scheme-handler/discord=vesktop.desktop
 x-scheme-handler/tg=userapp-Telegram Desktop-BCTD60.desktop;
 x-scheme-handler/tonsite=org.telegram.desktop.desktop;
 text/x-log=org.x.editor.desktop;
+image/jpeg=feh.desktop;
