@@ -7,13 +7,20 @@ function da() {
   git --git-dir="$XDG_DATA_HOME/dotfiles/" --work-tree="$HOME" add $@
 }
 
+# Use grealpath on macOS, realpath otherwise
+if [[ "$(uname -s)" == "Darwin" ]]; then
+  _realpath() { grealpath "$@"; }
+else
+  _realpath() { realpath "$@"; }
+fi
+
 # Component: 1password-cli
 # Purpose: push a secret file to the 1password vault
 function dspush() {
   VAULT="dotfiles"
   INPUT_FILE_PATH="$1"
-  FILE_PATH_RELATIVE_TO_HOME=$(realpath --relative-to="$HOME" "$INPUT_FILE_PATH")
-  FILE_PATH_ABSOLUTE=$(realpath "$INPUT_FILE_PATH")
+  FILE_PATH_RELATIVE_TO_HOME=$(_realpath --relative-to="$HOME" "$INPUT_FILE_PATH")
+  FILE_PATH_ABSOLUTE=$(_realpath "$INPUT_FILE_PATH")
   TITLE="~/$FILE_PATH_RELATIVE_TO_HOME"
   FILE_NAME=$(basename ${FILE_PATH_ABSOLUTE})
 
@@ -50,8 +57,8 @@ function dspull() {
   INPUT_FILE_PATH="$1"
   mkdir -p $(dirname ${INPUT_FILE_PATH})
   touch "$INPUT_FILE_PATH"
-  FILE_PATH_RELATIVE_TO_HOME=$(realpath --relative-to="$HOME" "$INPUT_FILE_PATH")
-  FILE_PATH_ABSOLUTE=$(realpath "$INPUT_FILE_PATH")
+  FILE_PATH_RELATIVE_TO_HOME=$(_realpath --relative-to="$HOME" "$INPUT_FILE_PATH")
+  FILE_PATH_ABSOLUTE=$(_realpath "$INPUT_FILE_PATH")
   TITLE="~/$FILE_PATH_RELATIVE_TO_HOME"
 
   echo "Pulling $FILE_PATH_ABSOLUTE"
@@ -81,8 +88,8 @@ function dspullall() {
 function dsdiff() {
   VAULT="dotfiles"
   INPUT_FILE_PATH="$1"
-  FILE_PATH_RELATIVE_TO_HOME=$(realpath --relative-to="$HOME" "$INPUT_FILE_PATH")
-  FILE_PATH_ABSOLUTE=$(realpath "$INPUT_FILE_PATH")
+  FILE_PATH_RELATIVE_TO_HOME=$(_realpath --relative-to="$HOME" "$INPUT_FILE_PATH")
+  FILE_PATH_ABSOLUTE=$(_realpath "$INPUT_FILE_PATH")
   TITLE="~/$FILE_PATH_RELATIVE_TO_HOME"
 
   echo "Comparing the remote secret with local file $FILE_PATH_ABSOLUTE"
@@ -116,8 +123,8 @@ function dsdiffall() {
 function dsdelete() {
   VAULT="dotfiles"
   INPUT_FILE_PATH="$1"
-  FILE_PATH_RELATIVE_TO_HOME=$(realpath --relative-to="$HOME" "$INPUT_FILE_PATH")
-  FILE_PATH_ABSOLUTE=$(realpath "$INPUT_FILE_PATH")
+  FILE_PATH_RELATIVE_TO_HOME=$(_realpath --relative-to="$HOME" "$INPUT_FILE_PATH")
+  FILE_PATH_ABSOLUTE=$(_realpath "$INPUT_FILE_PATH")
   TITLE="~/$FILE_PATH_RELATIVE_TO_HOME"
 
   echo "Deleting secret $TITLE"
