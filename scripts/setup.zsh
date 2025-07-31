@@ -10,8 +10,16 @@ function dspull() {
   INPUT_FILE_PATH="$1"
   mkdir -p $(dirname ${INPUT_FILE_PATH})
   touch "$INPUT_FILE_PATH"
-  FILE_PATH_RELATIVE_TO_HOME=$(realpath --relative-to="$HOME" "$INPUT_FILE_PATH")
-  FILE_PATH_ABSOLUTE=$(realpath "$INPUT_FILE_PATH")
+  
+  # Use grealpath on macOS, realpath on Linux
+  if [[ "$(uname -s)" == "Darwin" ]]; then
+    FILE_PATH_RELATIVE_TO_HOME=$(grealpath --relative-to="$HOME" "$INPUT_FILE_PATH")
+    FILE_PATH_ABSOLUTE=$(grealpath "$INPUT_FILE_PATH")
+  else
+    FILE_PATH_RELATIVE_TO_HOME=$(realpath --relative-to="$HOME" "$INPUT_FILE_PATH")
+    FILE_PATH_ABSOLUTE=$(realpath "$INPUT_FILE_PATH")
+  fi
+  
   TITLE="~/$FILE_PATH_RELATIVE_TO_HOME"
 
   echo "Pulling $FILE_PATH_ABSOLUTE"

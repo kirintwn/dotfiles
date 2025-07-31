@@ -52,7 +52,6 @@ brew install --cask balance-lock
 brew install --cask scroll-reverser
 brew install --cask karabiner-elements
 brew install --cask bettertouchtool
-brew install --cask yabai
 brew install --cask iina
 brew install --cask zoom
 brew install --cask 1password
