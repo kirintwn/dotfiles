@@ -35,9 +35,7 @@ brew install tealdeer
 brew install croc
 brew tap deviceinsight/packages
 brew install deviceinsight/packages/kafkactl
-brew install openvpn
 
-brew tap homebrew/cask-fonts
 brew install --cask font-fira-code-nerd-font
 brew install --cask google-chrome
 brew install --cask visual-studio-code

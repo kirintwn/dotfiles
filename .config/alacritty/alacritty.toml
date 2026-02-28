@@ -68,6 +68,11 @@ chars = "\u001BD"
 key = "Right"
 mods = "Control|Alt"
 
+[[keyboard.bindings]]
+chars = "\u001b\r"
+key = "Return"
+mods = "Shift"
+
 [[mouse.bindings]]
 action = "Copy"
 mouse = "Middle"
