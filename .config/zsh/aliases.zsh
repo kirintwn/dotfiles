@@ -19,3 +19,5 @@ alias printpath='print -rl $path'
 
 # print my public ip
 alias publicip="dig +short myip.opendns.com @resolver1.opendns.com"
+
+alias claudet="claude --channels plugin:telegram@claude-plugins-official"
