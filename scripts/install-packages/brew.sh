@@ -54,6 +54,11 @@ brew install --cask iina
 brew install --cask zoom
 brew install --cask 1password
 brew install --cask 1password-cli
+
+brew install gh
+brew install googleworkspace-cli
+brew install --cask codex
+brew install --cask claude-code
 brew cleanup
 
 # Disable System Integrity Protection first

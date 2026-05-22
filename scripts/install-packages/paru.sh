@@ -91,3 +91,8 @@ paru -S 1password-cli
 
 paru -S picom
 paru -S blueman
+
+paru -S github-cli
+paru -S googleworkspace-cli-bin
+paru -S openai-codex-bin
+paru -S claude-code

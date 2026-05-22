@@ -115,6 +115,65 @@ My lovely dotfiles, managed with git bare repository, adhering [XDG Base Directo
 
   5. Modify `~/.config/i3/i3blocks.conf` & `~/.config/i3/config`, can use `~/.config/i3/config_endeavouros` as a reference.
 
+## Agent setup
+
+Claude Code and Codex global agent setup is managed as portable dotfiles plus machine-local auth state.
+
+Restore on a new personal machine:
+
+```bash
+# Install package dependencies first so gh, npx, codex, claude, op, and jq exist.
+dspullall
+agentsetup
+agentdoctor
+```
+
+Then log in locally on each machine:
+
+```bash
+# Log in to GitHub CLI for gh-based workflows.
+gh auth login
+gh auth status
+
+# Pick the Codex login flow that fits the machine.
+codex login
+codex login --device-auth
+
+# Run Claude Code once and finish login/onboarding.
+claude
+```
+
+Run the local login steps even if generated config files already exist; MCP setup can create local config before auth is complete.
+
+Secret-backed MCP values belong in `~/.config/agents/mcp.env`. Restore it through `dspullall`; when adding or updating it, keep using the existing secret flow:
+
+```bash
+mkdir -p ~/.config/agents
+[[ -e ~/.config/agents/mcp.env ]] || install -m 600 /dev/null ~/.config/agents/mcp.env
+chmod 600 ~/.config/agents/mcp.env
+$EDITOR ~/.config/agents/mcp.env
+dspush ~/.config/agents/mcp.env
+```
+
+Store it in the `dotfiles` 1Password vault as a document titled `~/.config/agents/mcp.env`. `dspullall` restores that document back to the same local path.
+
+Use shell-safe assignments; omit values for MCP servers you do not want installed:
+
+```bash
+CONTEXT7_API_KEY='...'
+```
+
+`agentsetup` installs curated global skills with `npx skills`, then configures MCP. Third-party skill contents are generated local state and are not tracked.
+
+```bash
+agentskillssetup
+agentmcpsetup
+```
+
+Generated skills live under `~/.agents/skills`; Claude Code receives symlinks under `~/.claude/skills`.
+
+The `skills` CLI is invoked through `npx` and does not need a global npm install. `@cablate/mcp-google-map` is installed globally because the Google Maps MCP config launches `mcp-google-map --stdio` directly.
+
 ## Caveats
 
 - Some packages will failed to write config / data if the target directory not exists.
