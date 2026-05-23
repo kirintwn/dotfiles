@@ -209,6 +209,16 @@ function _agent_codex_add_toml_mcp() {
   print -r -- "added codex MCP: $name"
 }
 
+function _agent_toml_string() {
+  emulate -L zsh
+
+  local value="$1"
+
+  value="${value//\\/\\\\}"
+  value="${value//\"/\\\"}"
+  print -r -- "\"$value\""
+}
+
 function agentskillssetup() {
   emulate -L zsh
 
@@ -260,7 +270,7 @@ function agentmcpsetup() {
       if _agent_codex_mcp_exists "ha-mcp"; then
         print -r -- "skip codex MCP: ha-mcp already exists"
       else
-        codex mcp add ha-mcp --url "$HA_MCP_URL"
+        _agent_codex_add_toml_mcp "ha-mcp" "url = $(_agent_toml_string "$HA_MCP_URL")"
       fi
     else
       _agent_warn "HA_MCP_URL is not set; skipping codex MCP: ha-mcp"
@@ -300,7 +310,7 @@ function agentmcpsetup() {
       if _agent_claude_mcp_exists "ha-mcp"; then
         print -r -- "skip claude MCP: ha-mcp already exists"
       else
-        claude mcp add-json --scope user ha-mcp '{"type":"http","url":"${HA_MCP_URL}"}'
+        claude mcp add-json --scope user ha-mcp '{"type":"http","url":"${HA_MCP_URL}","oauth":{"clientId":"http://localhost:12345","callbackPort":12345}}'
       fi
     else
       _agent_warn "HA_MCP_URL is not set; skipping claude MCP: ha-mcp"
