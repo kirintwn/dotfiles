@@ -9,11 +9,11 @@
 #                                                           #
 # [user]                                                    #
 #   name = kirintwn                                         #
-#   email = kirin@xendit.co                                 #
+#   email = kirin@SOME.COMPANY                              #
 #############################################################
 
-[includeIf "gitdir:~/Documents/works/xendit/"]
-  path = ~/Documents/works/xendit/.gitconfig
+[includeIf "gitdir:~/Documents/works/some-company/"]
+  path = ~/Documents/works/some-company/.gitconfig
 
 [core]
   ignorecase = false

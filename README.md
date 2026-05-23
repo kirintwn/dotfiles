@@ -163,14 +163,25 @@ Use shell-safe assignments; omit values for MCP servers you do not want installe
 CONTEXT7_API_KEY='...'
 ```
 
-`agentsetup` installs curated global skills with `npx skills`, then configures MCP. Third-party skill contents are generated local state and are not tracked.
+Agent shell commands live in `~/.config/zsh/agents.zsh`:
 
 ```bash
+agentsetup
 agentskillssetup
 agentmcpsetup
+agentdoctor
 ```
 
+`agentsetup` runs `agentskillssetup`, then `agentmcpsetup`.
+
+Implementation lives in scripts so zsh startup only loads thin wrappers:
+
+- `scripts/setup-agent-skills.zsh` installs the curated global skills with `npx skills`.
+- `scripts/setup-agent-mcp.zsh` configures Claude Code and Codex MCP servers.
+
 Generated skills live under `~/.agents/skills`; Claude Code receives symlinks under `~/.claude/skills`.
+
+MCP setup writes generated local config through each client: Codex uses `~/.codex/config.toml`; Claude user-scope MCP may update `~/.claude.json`. These files are machine-local and should not be tracked.
 
 The `skills` CLI is invoked through `npx` and does not need a global npm install. `@cablate/mcp-google-map` is installed globally because the Google Maps MCP config launches `mcp-google-map --stdio` directly.
 

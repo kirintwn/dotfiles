@@ -66,7 +66,6 @@ paru -S docker
 paru -S docker-compose
 # docker compose version
 paru -S docker-buildx
-paru -S chamber
 paru -S trivy
 
 paru -S htop
